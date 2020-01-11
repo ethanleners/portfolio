@@ -9,6 +9,14 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Open Sans`,
+        ],
+        display: 'swap'
+      }},
+      {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: process.env.SPACE_ID,
