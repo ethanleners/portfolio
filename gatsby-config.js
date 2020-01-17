@@ -11,12 +11,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          `Open Sans`,
-        ],
-        display: 'swap'
-      }},
-      {
+        fonts: [`Open Sans`, `Heebo`, `Montserrat`],
+        display: "swap",
+      },
+    },
+    {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: process.env.SPACE_ID,
