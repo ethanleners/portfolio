@@ -8,6 +8,7 @@ module.exports = {
     author: `Ethan Leners`,
   },
   plugins: [
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {

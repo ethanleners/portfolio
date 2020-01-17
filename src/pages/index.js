@@ -4,7 +4,6 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import EthanMain from "../components/ethanMain"
 import SEO from "../components/seo"
-import "./index.css"
 
 const IndexPage = () => (
   <Layout>
