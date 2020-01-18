@@ -26,6 +26,7 @@ const Layout = ({ children }) => {
       color: ${props.theme.colors.text};
       `};
     box-sizing: border-box;
+    height: 100%;
   `
 
   return (
