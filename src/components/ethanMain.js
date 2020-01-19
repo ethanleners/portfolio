@@ -86,11 +86,11 @@ const EthanMain = () => {
       background: ${props.theme.colors.overlay};
       color: ${props.theme.colors.text};
       `}
-    font-family: Montserrat;
+    font-family: Montserrat, Heebo, Arial, Roboto, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
     font-size: 24px;
     line-height: 50px;
     padding: 20px;
-
 
     li {
       list-style-type: none;
