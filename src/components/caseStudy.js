@@ -113,24 +113,6 @@ const CaseStudy = () => {
     `}
   `
 
-  const CaseStudyImage = () => (
-    <Image to="/">
-      <Img fluid={data.file.childImageSharp.fluid} />
-    </Image>
-  )
-
-  // const data = useStaticQuery(graphql`
-  //   query {
-  //     placeholderImage: file(relativePath: { eq: "case_study_1.png" }) {
-  //       childImageSharp {
-  //         fixed(width: 428) {
-  //           ...GatsbyImageSharpFixed
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
-
   const data = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "case_study_1.png" }) {
@@ -142,6 +124,12 @@ const CaseStudy = () => {
       }
     }
   `)
+
+  const CaseStudyImage = () => (
+    <Image to="/">
+      <Img fluid={data.file.childImageSharp.fluid} />
+    </Image>
+  )
 
   return (
     <Card>

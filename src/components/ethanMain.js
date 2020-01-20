@@ -7,10 +7,10 @@ import { below } from "../utilities"
 const EthanMain = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "EthanLenersHeadshot.png" }) {
+      placeholderImage: file(relativePath: { eq: "EthanLenerspic.jpg" }) {
         childImageSharp {
-          fixed(width: 300, height: 400) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -113,6 +113,10 @@ const EthanMain = () => {
     }
   `
   const EthanImage = styled(Img)`
+    max-width: 300px;
+    max-height: 400px;
+    /* height: 100%; */
+    width: 100%;
     ${below[600]`
       margin: 20px;
     `}
@@ -123,7 +127,7 @@ const EthanMain = () => {
 
   return (
     <Card>
-      <EthanImage fixed={data.placeholderImage.childImageSharp.fixed} />
+      <EthanImage fluid={data.placeholderImage.childImageSharp.fluid} />
       <Bio>
         <Intro>I’m Ethan Leners</Intro>
         <Title>UI | UX DESIGNER</Title>
