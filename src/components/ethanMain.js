@@ -115,8 +115,8 @@ const EthanMain = () => {
   const EthanImage = styled(Img)`
     max-width: 300px;
     max-height: 400px;
-    /* height: 100%; */
     width: 100%;
+    height: 100%;
     ${below[600]`
       margin: 20px;
     `}
