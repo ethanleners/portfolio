@@ -69,6 +69,10 @@ const EthanMain = () => {
     ${props => `
       color: ${props.theme.colors.secondary};
     `}
+    ${below[600]`
+      font-size: 36px;
+      line-height: 55px;
+    `}
     font-size: 48px;
     line-height: 70px;
   `
@@ -76,6 +80,10 @@ const EthanMain = () => {
   const Title = styled.div`
     ${props => `
       color: ${props.theme.colors.text};
+    `}
+    ${below[600]`
+      font-size: 16px;
+      line-height: 27px;
     `}
     font-size: 24px;
     line-height: 35px;
@@ -85,20 +93,23 @@ const EthanMain = () => {
     ${props => `
       background: ${props.theme.colors.overlay};
       color: ${props.theme.colors.text};
-      `}
+    `}
     font-family: Montserrat, Heebo, Arial, Roboto, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
       sans-serif;
-    font-size: 24px;
-    line-height: 50px;
     padding: 20px;
 
     li {
       list-style-type: none;
-
+      font-size: 24px;
+      line-height: 50px;
       ${below[900]`
         line-height: 30px;
         padding-bottom: 20px;
       `};
+      ${below[600]`
+        font-size: 16px;
+        padding-bottom: 10px;
+      `}
     }
   `
   const EthanImage = styled(Img)`

@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
@@ -62,6 +63,10 @@ const CaseStudy = () => {
     ${props => `
       color: ${props.theme.colors.secondary};
     `}
+    ${below[600]`
+      font-size: 26px;
+      line-height: 40px;
+    `}
     font-size: 34px;
     line-height: 50px;
   `
@@ -70,6 +75,10 @@ const CaseStudy = () => {
     ${props => `
       color: ${props.theme.colors.text};
     `}
+    ${below[600]`
+      font-size: 16px;
+      line-height: 20px;
+    `}
     font-family: Montserrat, Heebo, Arial, Roboto, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
       sans-serif;
     font-size: 20px;
@@ -77,23 +86,38 @@ const CaseStudy = () => {
     padding: 20px 0;
   `
 
-  const Call = styled.div`
+  const Call = styled(Link)`
     ${props => `
       color: ${props.theme.colors.accent};
-      `}
+    `}
+    ${below[600]`
+      font-size: 16px;
+      line-height: 22px;
+    `}
     font-family: Montserrat, Heebo, Arial, Roboto, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
       sans-serif;
+    text-decoration: none;
     font-size: 20px;
     line-height: 30px;
+
+    &:hover {
+      text-decoration: underline;
+    }
   `
 
-  const EthanImage = styled(Img)`
+  const Image = styled(Link)`
     max-width: 428px;
     width: 100%;
     ${below[900]`
       margin: 0 30px;
     `}
   `
+
+  const CaseStudyImage = () => (
+    <Image to="/">
+      <Img fluid={data.file.childImageSharp.fluid} />
+    </Image>
+  )
 
   // const data = useStaticQuery(graphql`
   //   query {
@@ -121,13 +145,13 @@ const CaseStudy = () => {
 
   return (
     <Card>
-      <EthanImage fluid={data.file.childImageSharp.fluid} />
+      <CaseStudyImage/>
       <StudyText>
         <Title>Case Study Title</Title>
         <Description>
           Short description of the project. What is it and who is it for?
         </Description>
-        <Call>Read Case Study →</Call>
+        <Call to="/">Read Case Study →</Call>
       </StudyText>
     </Card>
   )
