@@ -74,9 +74,9 @@ const Header = ({ siteTitle }) => {
           Ethan Leners
         </EthanName>
         <FlexRow>
-          <MenuItem to="/">Portfolio</MenuItem>
+          <MenuItem to="/portfolio">Portfolio</MenuItem>
           <MenuItem to="/">Resume</MenuItem>
-          <MenuItem to="/">Blog</MenuItem>
+          {/* <MenuItem to="/">Blog</MenuItem> */}
         </FlexRow>
       </FlexRowOuter>
     </MainHeader>
