@@ -5,39 +5,39 @@ import Img from "gatsby-image"
 import styled from "styled-components"
 import { below } from "../utilities"
 
+const Card = styled.div`
+${props => `
+  background: ${props.theme.colors.overlay};
+  color: ${props.theme.colors.text};
+`}
+
+${below[900]`
+  flex-direction: column;
+  align-items: center;
+  margin: 5%;
+
+  ${props => `
+    background: ${props.theme.colors.overlay};
+    color: ${props.theme.colors.text};
+    `}
+`}
+
+${below[600]`
+  flex-direction: column;
+  margin: 30px 1%;
+  padding: 5%;
+`}
+
+margin-top: 80px;
+box-sizing: border-box;
+display: flex;
+flex-direction: row-reverse;
+align-items: flex-end;
+padding: 40px 0;
+justify-content: space-between;
+`
+
 const CaseStudy = () => {
-  const Card = styled.div`
-    ${props => `
-      background: ${props.theme.colors.overlay};
-      color: ${props.theme.colors.text};
-    `}
-
-    ${below[900]`
-      flex-direction: column;
-      align-items: center;
-      margin: 5%;
-
-      ${props => `
-        background: ${props.theme.colors.overlay};
-        color: ${props.theme.colors.text};
-        `}
-    `}
-
-    ${below[600]`
-      flex-direction: column;
-      margin: 30px 1%;
-      padding: 5%;
-    `}
-
-    margin-top: 80px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: flex-end;
-    padding: 40px 0;
-    justify-content: space-between;
-  `
-
   const StudyText = styled.div`
     ${below[900]`
       flex-direction: column;
@@ -133,7 +133,7 @@ const CaseStudy = () => {
 
   return (
     <Card>
-      <CaseStudyImage/>
+      <CaseStudyImage />
       <StudyText>
         <Title>Case Study Title</Title>
         <Description>
