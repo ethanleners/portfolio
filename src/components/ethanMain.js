@@ -5,6 +5,7 @@ import styled from "styled-components"
 import { below } from "../utilities"
 import { Title1, Text1, Text1List } from "./molecule"
 
+
 const EthanMain = () => {
   const data = useStaticQuery(graphql`
     query {
