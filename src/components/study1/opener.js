@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-import { Title1, Title3, Card, Text2, TextEmphasis } from "../molecule"
+import { Title1, Title3, Card, Text2, Text2List, TextEmphasis } from "../molecule"
 import { below } from "../../utilities"
 
 const StudyTitle = styled(Title1)`
@@ -60,13 +60,6 @@ width: calc(100% - 300px);
   padding: 0 0 0 40px;
   height: 100%;
   box-sizing: border-box;
-`
-
-const Text2List = styled(Text2)`
-  ${below[600]`
-  padding: 4px 0 0 0;
-`}
-  padding: 5px 0;
 `
 
 const Emphasis = styled(TextEmphasis)`

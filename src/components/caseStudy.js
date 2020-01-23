@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
 import { below } from "../utilities"
+import { Title1, Text1 } from "./molecule"
 
 const Card = styled.div`
 ${props => `
@@ -38,6 +39,7 @@ justify-content: space-between;
 `
 
 const CaseStudy = () => {
+
   const StudyText = styled.div`
     ${below[900]`
       flex-direction: column;
@@ -133,13 +135,13 @@ const CaseStudy = () => {
 
   return (
     <Card>
-      <CaseStudyImage />
+      <CaseStudyImage/>
       <StudyText>
-        <Title>Case Study Title</Title>
-        <Description>
+        <Title1>Case Study Title</Title1>
+        <Text1>
           Short description of the project. What is it and who is it for?
-        </Description>
-        <Call to="/">Read Case Study →</Call>
+        </Text1>
+        <Call to="/portfolio">Read Case Study →</Call>
       </StudyText>
     </Card>
   )

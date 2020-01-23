@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
 import { below } from "../utilities"
+import { Title1, Text1, Text1List } from "./molecule"
 
 const EthanMain = () => {
   const data = useStaticQuery(graphql`
@@ -65,31 +66,7 @@ const EthanMain = () => {
     box-sizing: border-box;
   `
 
-  const Intro = styled.div`
-    ${props => `
-      color: ${props.theme.colors.secondary};
-    `}
-    ${below[600]`
-      font-size: 36px;
-      line-height: 55px;
-    `}
-    font-size: 48px;
-    line-height: 70px;
-  `
-
-  const Title = styled.div`
-    ${props => `
-      color: ${props.theme.colors.text};
-    `}
-    ${below[600]`
-      font-size: 16px;
-      line-height: 27px;
-    `}
-    font-size: 24px;
-    line-height: 35px;
-  `
-
-  const List = styled.ul`
+  const List = styled.div`
     ${props => `
       background: ${props.theme.colors.overlay};
       color: ${props.theme.colors.text};
@@ -97,21 +74,8 @@ const EthanMain = () => {
     font-family: Montserrat, Heebo, Arial, Roboto, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
       sans-serif;
     padding: 20px;
-
-    li {
-      list-style-type: none;
-      font-size: 24px;
-      line-height: 50px;
-      ${below[900]`
-        line-height: 30px;
-        padding-bottom: 20px;
-      `};
-      ${below[600]`
-        font-size: 16px;
-        padding-bottom: 10px;
-      `}
-    }
   `
+
   const EthanImage = styled(Img)`
     max-width: 300px;
     max-height: 400px;
@@ -125,19 +89,25 @@ const EthanMain = () => {
     `}
   `
 
+  const TextTitle = styled(Text1)`
+    font-family: Heebo, Arial, Roboto, Ubuntu, Cantarell, "Open Sans",
+      "Helvetica Neue", sans-serif;
+    padding: 5px 0;
+  `
+
   return (
     <Card>
       <EthanImage fluid={data.placeholderImage.childImageSharp.fluid} />
       <Bio>
-        <Intro>I’m Ethan Leners</Intro>
-        <Title>UI | UX DESIGNER</Title>
-        <Title>WRITER</Title>
+        <Title1>I’m Ethan Leners</Title1>
+        <TextTitle>UI | UX DESIGNER</TextTitle>
+        <TextTitle>WRITER</TextTitle>
         <List>
-          <li>*long-time people pleaser</li>
-          <li>*advocate for accessibility</li>
-          <li>*disciple of good design</li>
-          <li>*dedicated problem solver</li>
-          <li>*habitual list-maker</li>
+          <Text1List>*long-time people pleaser</Text1List>
+          <Text1List>*advocate for accessibility</Text1List>
+          <Text1List>*disciple of good design</Text1List>
+          <Text1List>*dedicated problem solver</Text1List>
+          <Text1List>*habitual list-maker</Text1List>
         </List>
       </Bio>
     </Card>

@@ -47,3 +47,17 @@ font-family: Montserrat, Heebo, Arial, Roboto, Ubuntu, Cantarell, "Open Sans", "
   line-height: 20px;
   padding: 20px 0;
 `
+
+export const Text2List = styled(Text2)`
+  ${below[600]`
+  padding: 4px 0 0 0;
+`}
+  padding: 5px 0;
+`
+
+export const Text1List = styled(Text1)`
+  ${below[600]`
+  padding: 4px 0 0 0;
+`}
+  padding: 5px 0;
+`

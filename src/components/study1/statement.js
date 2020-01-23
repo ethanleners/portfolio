@@ -1,15 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 
-import { Title1, Title3, Card, Text2, TextEmphasis } from "../molecule"
+import { Title3, Card, Text2List } from "../molecule"
 import { below } from "../../utilities"
-
-const Text2List = styled(Text2)`
-  ${below[600]`
-  padding: 4px 0 0 0;
-`}
-  padding: 5px 0;
-`
 
 const OuterCard = styled(Card)`
   display: flex;
@@ -58,7 +51,8 @@ export const Statement = ({ children }) => {
         </Piece>
         <Piece title="Objectives:">
           <Text2List>
-            Develop an app that offers the user opportunities to develop new friendships as well as skill-building content.
+            Develop an app that offers the user opportunities to develop new
+            friendships as well as skill-building content.
           </Text2List>
         </Piece>
         <Piece title="Challenges:">
