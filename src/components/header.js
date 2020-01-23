@@ -5,6 +5,8 @@ import styled from "styled-components"
 import { below } from "../utilities"
 
 const Header = ({ siteTitle }) => {
+  const location = window.location.pathname.slice(1)
+
   const MainHeader = styled.header`
     ${props => `background: ${props.theme.colors.header};`};
     height: 50px;
@@ -30,13 +32,28 @@ const Header = ({ siteTitle }) => {
 
   const EthanName = styled(MenuLink)`
     ${props => `
-      background: ${props.theme.colors.accent};
+      background: ${location === "" ? props.theme.colors.accent : "none"};
       color: ${props.theme.colors.text};
       `};
   `
 
-  const MenuItem = styled(MenuLink)`
+  const Portfolio = styled(MenuLink)`
     ${props => `
+      background: ${location === "portfolio" ? props.theme.colors.accent : "none"};
+      color: ${props.theme.colors.text};
+    `};
+  `
+
+  const Resume = styled(MenuLink)`
+    ${props => `
+      background: ${location === "resume" ? props.theme.colors.accent : "none"};
+      color: ${props.theme.colors.text};
+    `};
+  `
+
+  const Blog = styled(MenuLink)`
+    ${props => `
+      background: ${location === "blog" ? props.theme.colors.accent : "none"};
       color: ${props.theme.colors.text};
     `};
   `
@@ -74,9 +91,9 @@ const Header = ({ siteTitle }) => {
           Ethan Leners
         </EthanName>
         <FlexRow>
-          <MenuItem to="/portfolio">Portfolio</MenuItem>
-          <MenuItem to="/">Resume</MenuItem>
-          {/* <MenuItem to="/">Blog</MenuItem> */}
+          <Portfolio to="/portfolio">Portfolio</Portfolio>
+          <Resume to="/">Resume</Resume>
+          {/* <Blog to="/">Blog</Blog> */}
         </FlexRow>
       </FlexRowOuter>
     </MainHeader>
