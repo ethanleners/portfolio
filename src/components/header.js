@@ -26,7 +26,7 @@ const Header = ({ siteTitle }) => {
       padding: 0 10px;
     `}
     ${below[500]`
-      padding: 0 5px;
+      /* padding: 0 5px; */
     `}
   `
 

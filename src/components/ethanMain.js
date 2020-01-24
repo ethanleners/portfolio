@@ -102,7 +102,7 @@ const EthanMain = () => {
       <Bio>
         <Title1>I’m Ethan Leners</Title1>
         <TextTitle>UI | UX DESIGNER</TextTitle>
-        <TextTitle>WRITER</TextTitle>
+        <TextTitle style={{paddingBottom: '10px'}}>WRITER</TextTitle>
         <List>
           <Text1List>*long-time people pleaser</Text1List>
           <Text1List>*advocate for accessibility</Text1List>
