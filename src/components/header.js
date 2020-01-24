@@ -5,7 +5,7 @@ import styled from "styled-components"
 import { below } from "../utilities"
 
 const Header = ({ siteTitle }) => {
-  const location = window.location.pathname.slice(1)
+  const location = window ? window.location.pathname.slice(1) : ""
 
   const MainHeader = styled.header`
     ${props => `background: ${props.theme.colors.header};`};
@@ -39,7 +39,9 @@ const Header = ({ siteTitle }) => {
 
   const Portfolio = styled(MenuLink)`
     ${props => `
-      background: ${location === "portfolio" ? props.theme.colors.accent : "none"};
+      background: ${
+        location === "portfolio" ? props.theme.colors.accent : "none"
+      };
       color: ${props.theme.colors.text};
     `};
   `
