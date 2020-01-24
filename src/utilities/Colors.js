@@ -5,4 +5,5 @@ module.exports = {
   text: "rgba(255, 255, 255, 0.87)",
   overlay: "rgba(255, 255, 255, 0.12)",
   header: "rgba(255, 255, 255, 0.12)",
+  emphasis: "#FFFFFF"
 }

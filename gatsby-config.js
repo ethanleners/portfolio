@@ -12,7 +12,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Open Sans`, `Heebo`, `Montserrat`],
+        fonts: [`Open Sans`, `Heebo`, `Montserrat\:400,700`],
         display: "swap",
       },
     },

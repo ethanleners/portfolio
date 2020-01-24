@@ -23,61 +23,82 @@ const ProcessTitle = styled(Title2)`
   margin-top: 40px;
 `
 
-const CardFlex = styled(Card)`
-  ${below[900]`
-flex-direction: column;
-align-items: center;
-margin: 5%;
-
-${props => `
-background: ${props.theme.colors.overlay};
-color: ${props.theme.colors.text};
-`}
-`}
-
+const CardFlex = styled.div`
+  ${props => `
+    background: ${props.theme.colors.overlay};
+    color: ${props.theme.colors.text};
+  `}
   ${below[600]`
-flex-direction: column;
-margin: 30px 1%;
-padding: 5%;
-`}
+  flex-direction: column;
+    margin: 20px;
+    height: auto;
 
-display: flex;
+  `}
+
+
+    margin: 20px;
+  height: 100%;
+  padding: 20px;
+  display: flex;
   flex-direction: row;
   align-items: center;
+  box-sizing: border-box;
+  height: 300px;
 `
 
-const CardText = styled.div`
+const CardWrapper = styled.div`
   ${below[900]`
-flex-direction: column;
-width: auto;
-padding: 50px 50px;
-`}
-  ${below[600]`
-flex-direction: column;
-width: auto;
-padding: 10px 10px;
-`}
-width: calc(100% - 300px);
+  flex: 0 100%;
+  `}
+  position: relative;
+  flex: 0 50%;
+  height: 100%;
+`
+
+const ImageCard = styled(Card)`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-end;
-  padding: 0 0 0 40px;
-  height: 100%;
-  box-sizing: border-box;
+  align-items: center;
+  padding: 30px 20px;
+  margin: 0;
+  min-width: 170px;
 `
 
-const ImageCard = styled(Card)``;
-
-const TextTitle = styled(Text1)`
+const ImageText = styled(Text1)`
+  ${props => `
+    color: ${props.theme.colors.emphasis};
+  `}
   font-family: Heebo, Arial, Roboto, Ubuntu, Cantarell, "Open Sans",
     "Helvetica Neue", sans-serif;
-  padding: 5px 0;
+  padding: 15px 0 0 0;
+  text-align: center;
+`
+
+const Badge = styled.div`
+  ${props => `
+    background: ${props.theme.colors.accent};
+    color: ${props.theme.colors.emphasis};
+  `}
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-size: 30px;
+  font-family: Heebo, Arial, Roboto, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
 `
 
 export const ProcessStep = props => {
   const StyledImage = styled.img`
-    width: 200px;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
   `
   const Image = props => (
     <>
@@ -95,29 +116,15 @@ export const ProcessStep = props => {
   )
 
   return (
-    <>
-      <ProcessTitle>The Process</ProcessTitle>
+    <CardWrapper>
+      <Badge>{props.number}</Badge>
       <CardFlex>
         <ImageCard>
           <Image image={props.image} />
-          <TextTitle>{props.imageText}</TextTitle>
+          <ImageText>{props.imageText}</ImageText>
         </ImageCard>
-        <CardText>
-          <Title3>What is it?</Title3>
-          <Text2>
-            Friendly is a social media networking app that offers skill-building
-            opportunities to help make deep, lasting friendships.
-          </Text2>
-          <Title3>My Role:</Title3>
-          <Text2List>Lead storyboarding and conducted user research</Text2List>
-          <Text2List>
-            User Experience Design: creating user flows and wireframes
-          </Text2List>
-          <Text2List>
-            Created high fidelity wireframes to better demonstrate experience
-          </Text2List>
-        </CardText>
+        {props.children}
       </CardFlex>
-    </>
+    </CardWrapper>
   )
 }
