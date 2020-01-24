@@ -5,9 +5,13 @@ import styled from "styled-components"
 import { below } from "../utilities"
 
 const Header = ({ siteTitle }) => {
+  let location
   try {
-    const location = window.location.pathname.slice(1)
-  } catch {console.log("Window not defined")}
+    location = window.location.pathname.slice(1)
+  } catch {
+    console.log("Window not defined")
+    location = ""
+  }
 
   const MainHeader = styled.header`
     ${props => `background: ${props.theme.colors.header};`};
