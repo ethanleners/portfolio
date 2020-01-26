@@ -57,7 +57,7 @@ const ImageCard = styled(Card)`
 
 const ImageText = styled(Text1)`
   ${props => `
-    color: ${props.theme.colors.emphasis};
+    color: ${props.theme.colors.text};
   `}
   font-family: Heebo, Arial, Roboto, Ubuntu, Cantarell, "Open Sans",
     "Helvetica Neue", sans-serif;
@@ -68,7 +68,7 @@ const ImageText = styled(Text1)`
 const Badge = styled.div`
   ${props => `
     background: ${props.theme.colors.accent};
-    color: ${props.theme.colors.emphasis};
+    color: ${props.theme.colors.text};
   `}
   border-radius: 50%;
   width: 70px;

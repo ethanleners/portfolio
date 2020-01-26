@@ -62,33 +62,6 @@ const CaseStudy = () => {
     box-sizing: border-box;
   `
 
-  const Title = styled.div`
-    ${props => `
-      color: ${props.theme.colors.secondary};
-    `}
-    ${below[600]`
-      font-size: 26px;
-      line-height: 40px;
-    `}
-    font-size: 34px;
-    line-height: 50px;
-  `
-
-  const Description = styled.div`
-    ${props => `
-      color: ${props.theme.colors.text};
-    `}
-    ${below[600]`
-      font-size: 16px;
-      line-height: 20px;
-    `}
-    font-family: Montserrat, Heebo, Arial, Roboto, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-      sans-serif;
-    font-size: 20px;
-    line-height: 24px;
-    padding: 20px 0;
-  `
-
   const Call = styled(Link)`
     ${props => `
       color: ${props.theme.colors.accent};
@@ -134,13 +107,32 @@ const CaseStudy = () => {
     </Image>
   )
 
+  const Title = ({ children }) => {
+    const TitleLink = styled(Link)`
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+        ${props => `
+          color: ${props.theme.colors.secondary};
+        `}
+      }
+    `
+    return (
+      <TitleLink to={caseStudyUrl}>
+        <Title1>{children}</Title1>
+      </TitleLink>
+    )
+  }
+
   return (
     <CaseStudyCard>
       <CaseStudyImage />
       <StudyText>
-        <Title1>Case Study: Friendly</Title1>
+        <Title>Case Study: Friendly</Title>
         <Text1>
-          A social media networking app that offers skill-building opportunities to help make deep, lasting friendships.
+          A social media networking app that offers skill-building opportunities
+          to help make deep, lasting friendships.
         </Text1>
         <Call to={caseStudyUrl}>Read Case Study →</Call>
       </StudyText>
