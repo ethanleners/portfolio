@@ -6,6 +6,7 @@ import styled, { createGlobalStyle, ThemeProvider } from "styled-components"
 
 import Header from "./header"
 import "./layout.css"
+import Footer from "./footer"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -20,8 +21,8 @@ const Layout = ({ children }) => {
 
   const Main = styled.main`
     background: #191a2a;
-    font-family: Heebo, Arial, Roboto, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-      sans-serif;
+    font-family: Heebo, Arial, Roboto, Ubuntu, Cantarell, "Open Sans",
+      "Helvetica Neue", sans-serif;
     ${props => `
       color: ${props.theme.colors.text};
       `};
@@ -43,6 +44,7 @@ const Layout = ({ children }) => {
         >
           <main>{children}</main>
         </div>
+        <Footer />
       </Main>
     </ThemeProvider>
   )

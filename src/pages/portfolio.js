@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import { Opener, Statement, Process } from "../components/study1"
+import { Opener, Statement, Process, Research, StoryBoard } from "../components/study1"
 
 
 const Portfolio = () => {
@@ -13,6 +13,8 @@ const Portfolio = () => {
       <Opener></Opener>
       <Statement></Statement>
       <Process></Process>
+      <Research></Research>
+      <StoryBoard></StoryBoard>
     </Layout>
   )
 }

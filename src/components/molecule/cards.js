@@ -25,4 +25,5 @@ margin: 40px 0;
 box-sizing: border-box;
 padding: 40px;
 display: flex;
+flex-direction: column;
 `

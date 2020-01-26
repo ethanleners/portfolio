@@ -19,7 +19,7 @@ const EthanMain = () => {
     }
   `)
 
-  const Card = styled.div`
+  const EthanMainCard = styled.div`
     ${props => `
       background: linear-gradient(90deg, ${props.theme.colors.background} 10%, ${props.theme.colors.overlay} 10%);
       color: ${props.theme.colors.text};
@@ -97,7 +97,7 @@ const EthanMain = () => {
   `
 
   return (
-    <Card>
+    <EthanMainCard>
       <EthanImage fluid={data.placeholderImage.childImageSharp.fluid} />
       <Bio>
         <Title1>I’m Ethan Leners</Title1>
@@ -111,7 +111,7 @@ const EthanMain = () => {
           <Text1List>*habitual list-maker</Text1List>
         </List>
       </Bio>
-    </Card>
+    </EthanMainCard>
   )
 }
 

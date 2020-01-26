@@ -45,3 +45,7 @@ export const Title3 = styled.div`
     "Helvetica Neue", sans-serif;
   line-height: 29px;
 `
+
+export const SectionTitle = styled(Title2)`
+  margin: 40px 0 20px 0;
+`

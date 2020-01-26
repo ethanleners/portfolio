@@ -3,13 +3,9 @@ import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-import { Title2, Text2 } from "../molecule"
+import { SectionTitle, Text2 } from "../molecule"
 import { below } from "../../utilities"
 import { ProcessStep } from "../organism/processStep"
-
-const ProcessTitle = styled(Title2)`
-  margin: 40px 0 20px 0;
-`
 
 const ProcessWrapper = styled.div`
   display: flex;
@@ -23,7 +19,7 @@ const ProcessText = styled(Text2)`
 
 export const Process = props => (
   <>
-    <ProcessTitle>The Process</ProcessTitle>
+    <SectionTitle>The Process</SectionTitle>
     <ProcessWrapper>
       <ProcessStep
         image="experience"

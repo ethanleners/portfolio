@@ -6,7 +6,9 @@ import styled from "styled-components"
 import { below } from "../utilities"
 import { Title1, Text1 } from "./molecule"
 
-const Card = styled.div`
+const caseStudyUrl = "/portfolio"
+
+const CaseStudyCard = styled.div`
 ${props => `
   background: ${props.theme.colors.overlay};
   color: ${props.theme.colors.text};
@@ -34,12 +36,11 @@ box-sizing: border-box;
 display: flex;
 flex-direction: row-reverse;
 align-items: flex-end;
-padding: 40px 0;
+padding: 40px 40px 40px 0;
 justify-content: space-between;
 `
 
 const CaseStudy = () => {
-
   const StudyText = styled.div`
     ${below[900]`
       flex-direction: column;
@@ -117,7 +118,7 @@ const CaseStudy = () => {
 
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "case_study_1.png" }) {
+      file(relativePath: { eq: "friendly2.png" }) {
         childImageSharp {
           fluid(maxWidth: 428) {
             ...GatsbyImageSharpFluid
@@ -128,22 +129,22 @@ const CaseStudy = () => {
   `)
 
   const CaseStudyImage = () => (
-    <Image to="/">
+    <Image to={caseStudyUrl}>
       <Img fluid={data.file.childImageSharp.fluid} />
     </Image>
   )
 
   return (
-    <Card>
-      <CaseStudyImage/>
+    <CaseStudyCard>
+      <CaseStudyImage />
       <StudyText>
-        <Title1>Case Study Title</Title1>
+        <Title1>Case Study: Friendly</Title1>
         <Text1>
-          Short description of the project. What is it and who is it for?
+          A social media networking app that offers skill-building opportunities to help make deep, lasting friendships.
         </Text1>
-        <Call to="/portfolio">Read Case Study →</Call>
+        <Call to={caseStudyUrl}>Read Case Study →</Call>
       </StudyText>
-    </Card>
+    </CaseStudyCard>
   )
 }
 

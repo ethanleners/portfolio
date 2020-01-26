@@ -4,13 +4,8 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
 import {
-  Title2,
-  Title3,
   Card,
   Text1,
-  Text2,
-  Text2List,
-  TextEmphasis,
 } from "../molecule"
 import { below } from "../../utilities"
 
@@ -19,15 +14,12 @@ import experience from "../../images/experience.svg"
 import map from "../../images/map.svg"
 import user from "../../images/user.svg"
 
-const ProcessTitle = styled(Title2)`
-  margin-top: 40px;
-`
-
 const CardFlex = styled.div`
   ${props => `
     background: ${props.theme.colors.overlay};
     color: ${props.theme.colors.text};
   `}
+
   ${below[600]`
   flex-direction: column;
     margin: 20px;
@@ -35,8 +27,7 @@ const CardFlex = styled.div`
 
   `}
 
-
-    margin: 20px;
+  margin: 20px;
   height: 100%;
   padding: 20px;
   display: flex;

@@ -4,7 +4,6 @@ import styled from "styled-components"
 import { SectionTitle, Title3, Card, Text2List } from "../molecule"
 import { below } from "../../utilities"
 
-
 const InnerCard = styled(Card)`
   ${below[900]`
     margin: 0 0 20px 0;
@@ -36,25 +35,12 @@ const Piece = props => (
   </InnerCard>
 )
 
-export const Research = ({ children }) => {
+export const StoryBoard = ({ children }) => {
   return (
     <>
       <SectionTitle>User Research</SectionTitle>
       <Piece title="Quantitative Research:">
-        <Text2List>
-          Surveys were conducted of age-specific audiences to identify
-          population groups who report the most difficulty in making and
-          sustaining friendships.
-        </Text2List>
-        <Text2List>
-          Participants were also surveyed on dissatisfaction with other social
-          media applications.
-        </Text2List>
-      </Piece>
-      <Piece title="Qualitative Research:">
-        <Text2List>
-        User interviews provided insights into the pain points of our target audience.
-        </Text2List>
+        <Text2List>Images here</Text2List>
       </Piece>
     </>
   )

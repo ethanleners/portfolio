@@ -1,3 +1,3 @@
-export * from "./card"
+export * from "./cards"
 export * from "./titles"
 export * from "./texts"
