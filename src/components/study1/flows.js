@@ -1,5 +1,7 @@
 import React from "react"
 import styled from "styled-components"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 
 import { NumberCard } from "../organism"
 import { SectionTitle, Title3, Card, Text2List } from "../molecule"
@@ -34,6 +36,7 @@ const ProcessWrapper = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin: 10px;
 `
 
 const Title = styled(Title3)`
@@ -47,16 +50,48 @@ const Piece = props => (
   </InnerCard>
 )
 
-const AmyFlow = () => <div></div>
-const MatthewFlow = () => <div></div>
+const ImageWrapper = styled.div`
+  padding-right: 30px;
+`
 
 export const UserFlows = ({ children }) => {
+  const data = useStaticQuery(graphql`
+    query {
+      amy: file(relativePath: { eq: "Amy_userflow.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 842) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      matthew: file(relativePath: { eq: "Matthew_userflow.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 842) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+
+  const AmyFlow = () => (
+    <ImageWrapper>
+      <Img fluid={data.amy.childImageSharp.fluid} />
+    </ImageWrapper>
+  )
+
+  const MatthewFlow = () => (
+    <ImageWrapper>
+      <Img fluid={data.matthew.childImageSharp.fluid} />
+    </ImageWrapper>
+  )
+
   return (
     <>
+      <SectionTitle>User Flows</SectionTitle>
       <OuterCard>
-        <Piece title="Quantitative Research:">
+        <InnerCard>
           <MatthewFlow></MatthewFlow>
-
           <ProcessWrapper>
             <NumberCard
               number="1"
@@ -75,10 +110,10 @@ export const UserFlows = ({ children }) => {
               text="Matching with a potential friend opens a chat window so Matthew can easily start a conversation."
             />
           </ProcessWrapper>
-        </Piece>
-        <Piece>
+        </InnerCard>
+        <InnerCard>
+          <AmyFlow></AmyFlow>
           <ProcessWrapper>
-            <AmyFlow></AmyFlow>
             <NumberCard
               number="1"
               text="Articles help Amy develop skills to make and maintain friends as well as give her advice on the dangers of meeting people online."
@@ -92,7 +127,7 @@ export const UserFlows = ({ children }) => {
               text="Useful tools help Amy edit her profile to put her best foot forward while staying authentic."
             />
           </ProcessWrapper>
-        </Piece>
+        </InnerCard>
       </OuterCard>
     </>
   )

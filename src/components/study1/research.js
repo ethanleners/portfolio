@@ -80,7 +80,7 @@ export const Research = ({ children }) => {
           At this stage, research provides
           <strong>baseline metrics for the success</strong>
           of our design as well as the opportunity to make
-          <strong>user-focused design choices.</strong>
+          <strong>user-focused design choices</strong>.
         </Text2List>
       </OuterCard>
     </>
