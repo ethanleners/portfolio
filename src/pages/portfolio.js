@@ -10,6 +10,7 @@ import {
   Research,
   StoryBoard,
   Personas,
+  UserFlows
 } from "../components/study1"
 
 const Portfolio = () => {
@@ -22,6 +23,7 @@ const Portfolio = () => {
       <Research />
       <StoryBoard />
       <Personas />
+      <UserFlows />
     </Layout>
   )
 }
