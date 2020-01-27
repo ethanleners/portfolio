@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { below } from "../../utilities"
+import {Title3 } from "../molecule"
 
 export const Text1 = styled.div`
   ${props => `
@@ -60,4 +61,13 @@ export const Text1List = styled(Text1)`
   padding: 4px 0 0 0;
 `}
   padding: 5px 0;
+`
+
+export const SectionCaption = styled(Title3)`
+  ${props => `
+    color: ${props.theme.colors.text};
+    `}
+  font-size: 24px;
+  align-self: center;
+  text-align: center;
 `

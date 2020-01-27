@@ -1,7 +1,14 @@
 import React from "react"
 import styled from "styled-components"
 
-import { SectionTitle, Title3, Card, Text2, Text2List } from "../molecule"
+import {
+  SectionTitle,
+  SectionCaption,
+  Title3,
+  Card,
+  Text2,
+  Text2List,
+} from "../molecule"
 import { below } from "../../utilities"
 
 import overworked from "../../images/sb1_overworked.png"
@@ -70,14 +77,6 @@ const ImagesWrapper = styled.div`
   flex-wrap: wrap;
 `
 
-const SectionCaption = styled(Title3)`
-  ${props => `
-    color: ${props.theme.colors.text};
-    `}
-  font-size: 24px;
-  align-self: center;
-`;
-
 export const StoryBoard = () => (
   <>
     <SectionTitle>Storyboard</SectionTitle>
@@ -104,7 +103,9 @@ export const StoryBoard = () => (
           description="New friends and hobbies!"
         ></WideImage>
       </ImagesWrapper>
-      <SectionCaption>Storyboarding helps to identify key parts of the experience of the user.</SectionCaption>
+      <SectionCaption>
+        Storyboarding helps to identify key parts of the experience of the user.
+      </SectionCaption>
     </InnerCard>
   </>
 )
