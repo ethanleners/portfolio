@@ -100,7 +100,7 @@ const Header = ({ siteTitle }) => {
         </EthanName>
         <FlexRow>
           <Portfolio to="/portfolio">Portfolio</Portfolio>
-          <Resume to="/">Resume</Resume>
+          <Resume to="/resume">Resume</Resume>
           {/* <Blog to="/">Blog</Blog> */}
         </FlexRow>
       </FlexRowOuter>
