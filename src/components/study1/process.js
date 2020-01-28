@@ -2,7 +2,6 @@ import React from "react"
 import styled from "styled-components"
 
 import { SectionTitle, Text2 } from "../molecule"
-import { below } from "../../utilities"
 import { ProcessStep } from "../organism/processStep"
 
 const ProcessWrapper = styled.div`

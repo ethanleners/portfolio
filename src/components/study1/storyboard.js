@@ -4,10 +4,8 @@ import styled from "styled-components"
 import {
   SectionTitle,
   SectionCaption,
-  Title3,
   Card,
   Text2,
-  Text2List,
 } from "../molecule"
 import { below } from "../../utilities"
 

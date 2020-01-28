@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-import { SectionTitle, Title3, Card, Text2, Text2List } from "../molecule"
+import { SectionTitle, Card } from "../molecule"
 import { below } from "../../utilities"
 import { Persona } from "../organism"
 
@@ -29,29 +29,6 @@ const InnerCard = styled(Card)`
   &:last-of-type {
     margin-bottom: 0;
   }
-`
-const ImageWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`
-
-const ImagesWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: space-between;
-  justify-content: space-between;
-  flex-wrap: wrap;
-`
-
-const SectionCaption = styled(Title3)`
-  ${props => `
-    color: ${props.theme.colors.text};
-    `}
-  font-size: 24px;
-  align-self: center;
-  text-align: center;
 `
 
 const matthewInfo = {

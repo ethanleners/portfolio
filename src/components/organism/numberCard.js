@@ -1,15 +1,8 @@
 import React from "react"
 import styled from "styled-components"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
 
-import { Card, Text1, Text2List } from "../molecule"
+import { Text2List } from "../molecule"
 import { below } from "../../utilities"
-
-import design from "../../images/design.svg"
-import experience from "../../images/experience.svg"
-import map from "../../images/map.svg"
-import user from "../../images/user.svg"
 
 const CardFlex = styled.div`
   ${props => `

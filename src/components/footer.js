@@ -1,8 +1,6 @@
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
-import { below } from "../utilities"
 
 import facebook from "../images/Facebook.svg"
 import twitter from "../images/Twitter.svg"

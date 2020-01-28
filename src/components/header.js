@@ -59,12 +59,12 @@ const Header = ({ siteTitle }) => {
     `};
   `
 
-  const Blog = styled(MenuLink)`
-    ${props => `
-      background: ${location === "blog" ? props.theme.colors.accent : "none"};
-      color: ${props.theme.colors.text};
-    `};
-  `
+  // const Blog = styled(MenuLink)`
+  //   ${props => `
+  //     background: ${location === "blog" ? props.theme.colors.accent : "none"};
+  //     color: ${props.theme.colors.text};
+  //   `};
+  // `
 
   const FlexRow = styled.div`
     display: flex;

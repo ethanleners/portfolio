@@ -5,12 +5,9 @@ import Img from "gatsby-image"
 
 import { NumberCard } from "../organism"
 import {
-  Title1,
-  Title3,
   Card,
   Text2,
   SectionTitle,
-  TextEmphasis,
 } from "../molecule"
 import { below } from "../../utilities"
 
