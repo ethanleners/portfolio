@@ -5,6 +5,12 @@ import { Title3, Card, Text2, Text2List, SectionCaption } from "../molecule"
 import { below } from "../../utilities"
 import { skills, tools, job_history_data } from "./resume_data"
 
+const FlexColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`;
+
 const FlexRow = styled.div`
   ${below[600]`
     display: flex;
@@ -45,7 +51,7 @@ const FlexCard = styled(Card)`
 
 export const Skills = ({ children }) => {
   return (
-    <>
+    <FlexColumn>
       <FlexRow>
         <Title>Experience</Title>
         <FlexCard>
@@ -92,6 +98,6 @@ export const Skills = ({ children }) => {
           ))}
         </FlexCard>
       </FlexRow>
-    </>
+    </FlexColumn>
   )
 }
