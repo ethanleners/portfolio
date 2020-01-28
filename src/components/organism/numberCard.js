@@ -11,10 +11,10 @@ const CardFlex = styled.div`
   `}
 
   ${below[600]`
-  flex-direction: column;
-    margin: 20px;
+    flex-direction: column;
+    padding: 10px 10px 10px 25px;
+    margin: 10px;
     height: auto;
-
   `}
   position: relative;
   margin: 20px;
@@ -50,7 +50,7 @@ const Badge = styled.div`
 
   position: absolute;
   top: calc(50% - 17.5px);
-  left: -17.50px;
+  left: -17.5px;
   font-size: 20px;
   font-family: Heebo, Arial, Roboto, Ubuntu, Cantarell, "Open Sans",
     "Helvetica Neue", sans-serif;

@@ -4,11 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
 import { NumberCard } from "../organism"
-import {
-  Card,
-  Text2,
-  SectionTitle,
-} from "../molecule"
+import { Card, Text2, SectionTitle } from "../molecule"
 import { below } from "../../utilities"
 
 import article from "../../images/Prototype_read.png"

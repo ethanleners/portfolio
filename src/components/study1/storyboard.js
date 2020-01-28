@@ -1,12 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-import {
-  SectionTitle,
-  SectionCaption,
-  Card,
-  Text2,
-} from "../molecule"
+import { SectionTitle, SectionCaption, Card, Text2 } from "../molecule"
 import { below } from "../../utilities"
 
 import overworked from "../../images/sb1_overworked.png"
@@ -43,6 +38,10 @@ const ImageWrapper = styled.div`
 
 const WideImage = props => {
   const Image = styled.img`
+    ${below[600]`
+      max-width: 250px;
+      margin-top: 20px;
+    `}
     padding: 5px;
     max-width: 289px;
   `
@@ -56,6 +55,10 @@ const WideImage = props => {
 
 const VerticalImage = props => {
   const Image = styled.img`
+    ${below[600]`
+      max-width: 115px;
+      margin-top: 20px;
+    `}
     padding: 5px;
     max-width: 145px;
   `

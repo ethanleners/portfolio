@@ -11,7 +11,8 @@ import {
   Personas,
   UserFlows,
   Wireframes,
-  Prototype
+  Prototype,
+  Conclusion
 } from "../components/study1"
 
 const Portfolio = () => {
@@ -27,6 +28,7 @@ const Portfolio = () => {
       <UserFlows />
       <Wireframes />
       <Prototype />
+      <Conclusion />
     </Layout>
   )
 }

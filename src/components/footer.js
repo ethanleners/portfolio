@@ -2,20 +2,20 @@ import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
 
-import facebook from "../images/Facebook.svg"
-import twitter from "../images/Twitter.svg"
-import email from "../images/Email.svg"
-import instagram from "../images/Instagram.svg"
+import linkedin from "../images/social_linkedin.svg"
+import twitter from "../images/social_twitter.svg"
+import email from "../images/social_email.svg"
+import instagram from "../images/social_instagram.svg"
 
 const links = {
-  facebook: "#",
-  twitter: "#",
-  email: "#",
-  instagram: "#",
+  linkedin: "https://www.linkedin.com/in/ethanleners",
+  twitter: "https://twitter.com/EthanLeners",
+  email: "mailto:ethan.leners@gmail.com?subject=Reaching Out from Your Website",
+  instagram: "https://www.instagram.com/ethanleners/",
 }
 
 const icons = {
-  facebook: facebook,
+  linkedin: linkedin,
   twitter: twitter,
   email: email,
   instagram: instagram,
@@ -25,6 +25,7 @@ const Footer = () => {
   const MainFooter = styled.footer`
     ${props => `background: ${props.theme.colors.header};`};
     height: 50px;
+    margin-top: 100px;
   `
 
   const A = styled.a`
@@ -58,7 +59,7 @@ const Footer = () => {
   return (
     <MainFooter>
       <FlexRow>
-        <SocialLink link="facebook" />
+        <SocialLink link="linkedin" />
         <SocialLink link="twitter" />
         <SocialLink link="email" />
         <SocialLink link="instagram" />
