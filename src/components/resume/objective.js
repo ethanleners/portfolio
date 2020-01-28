@@ -14,7 +14,6 @@ const ResumeTitle = styled(Title1)`
   margin-top: 40px;
 `
 
-
 const CardFlex = styled(Card)`
   ${below[900]`
     flex-direction: column;
@@ -47,13 +46,13 @@ export const Objective = ({ children }) => (
     <FlexHeader>
       <ResumeTitle>Resume</ResumeTitle>
     </FlexHeader>
-    <CardFlex>
+    {/* <CardFlex>
       <EmploymentObjective>Employment Objectives</EmploymentObjective>
       <Text2>
         Experienced designer with a demonstrated history of project management
         and an interdisciplinary practice entering the tech industry pursuing a
         career in User Experience Design.
       </Text2>
-    </CardFlex>
+    </CardFlex> */}
   </>
 )

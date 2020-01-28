@@ -50,13 +50,29 @@ const education = [
 
 export const Education = ({ children }) => {
   return (
-    <FlexRow>
-      <Title>Education</Title>
-      <FlexCard>
-        {education.map((item, i) => (
-          <Text2 key={i + 200}>{item}</Text2>
-        ))}
-      </FlexCard>
-    </FlexRow>
+    <>
+    <br/>
+    <br/>
+
+      <FlexRow>
+        <Title>Employment Objectives</Title>
+        <FlexCard>
+          <Text2>
+            Experienced designer with a demonstrated history of project
+            management and an interdisciplinary practice entering the tech
+            industry pursuing a career in User Experience Design.
+          </Text2>
+        </FlexCard>
+      </FlexRow>
+
+      <FlexRow>
+        <Title>Education</Title>
+        <FlexCard>
+          {education.map((item, i) => (
+            <Text2 key={i + 200}>{item}</Text2>
+          ))}
+        </FlexCard>
+      </FlexRow>
+    </>
   )
 }
