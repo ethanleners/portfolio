@@ -93,7 +93,7 @@ export const Prototype = ({ children }) => {
 
   return (
     <>
-      <StudyTitle>Case Study: Friendly</StudyTitle>
+      <StudyTitle>Prototype</StudyTitle>
       <CardFlex>
         <Image to="/">
           <Img fluid={data.file.childImageSharp.fluid} />
