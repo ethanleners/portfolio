@@ -25,7 +25,7 @@ const FlexRow = styled.div`
 const Title = styled(Title3)`
   ${below[600]`
     margin-top: 20px;
-    flex-basis: 0;
+    flex-basis: auto;
     height: auto;
   `}
   padding: 0;
@@ -38,7 +38,7 @@ const FlexCard = styled(Card)`
   ${below[600]`
     margin: 0;
     display: flex;
-    flex-basis: 0;
+    flex-basis: auto;
     flex-direction: column;
     height: auto;
   `}
