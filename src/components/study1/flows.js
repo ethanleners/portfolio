@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
 import { NumberCard } from "../organism"
-import { SectionTitle, Card } from "../molecule"
+import { SectionTitle, Title3, Card } from "../molecule"
 import { below } from "../../utilities"
 
 const OuterCard = styled(Card)`
@@ -66,6 +66,10 @@ export const UserFlows = ({ children }) => {
     }
   `)
 
+  const Title = styled(Title3)`
+    padding: 10px 0;
+  `
+
   const AmyFlow = () => (
     <ImageWrapper>
       <Img fluid={data.amy.childImageSharp.fluid} />
@@ -83,6 +87,7 @@ export const UserFlows = ({ children }) => {
       <SectionTitle>User Flows</SectionTitle>
       <OuterCard>
         <InnerCard>
+          <Title>Matthew</Title>
           <MatthewFlow></MatthewFlow>
           <ProcessWrapper>
             <NumberCard
@@ -104,6 +109,7 @@ export const UserFlows = ({ children }) => {
           </ProcessWrapper>
         </InnerCard>
         <InnerCard>
+          <Title>Amy</Title>
           <AmyFlow></AmyFlow>
           <ProcessWrapper>
             <NumberCard
