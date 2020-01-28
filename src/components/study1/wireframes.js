@@ -43,21 +43,13 @@ const ImageWrapper = styled.div`
   align-items: center;
 `
 
-const WideImage = props => {
-  const Image = styled.img`
-    padding: 5px;
-    max-width: 289px;
-  `
-  return (
-    <ImageWrapper>
-      <Image src={props.image} />
-      <Text2>{props.description}</Text2>
-    </ImageWrapper>
-  )
-}
-
 const VerticalImage = props => {
   const Image = styled.img`
+    ${below[600]`
+      max-width: 115px;
+      margin-top: 20px;
+    `}
+
     padding: 5px;
     max-width: 160px;
   `
