@@ -1,10 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-import {
-  Card,
-  Text1,
-} from "../molecule"
+import { Card, Text1 } from "../molecule"
 import { below } from "../../utilities"
 
 import design from "../../images/design.svg"
@@ -24,7 +21,6 @@ const CardFlex = styled.div`
     height: auto;
 
   `}
-
   margin: 20px;
   height: 100%;
   padding: 20px;
@@ -57,6 +53,7 @@ const ImageText = styled(Text1)`
   ${props => `
     color: ${props.theme.colors.text};
   `}
+
   font-family: Heebo, Arial, Roboto, Ubuntu, Cantarell, "Open Sans",
     "Helvetica Neue", sans-serif;
   padding: 15px 0 0 0;

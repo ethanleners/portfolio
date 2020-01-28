@@ -19,7 +19,6 @@ const InnerCard = styled(Card)`
     margin: 0 0 10px 0;
     padding: 3%;
   `}
-
   margin: 0 0 30px 0;
   padding: 20px;
   display: flex;

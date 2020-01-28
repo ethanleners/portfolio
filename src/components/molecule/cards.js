@@ -20,7 +20,9 @@ ${below[600]`
   margin: 30px 1%;
   padding: 5%;
 `}
-
+-webkit-transform: translate3d(0, 0, 0);
+transform: translate3d(0, 0, 0);
+z-index: 1000;
 margin: 40px 0;
 box-sizing: border-box;
 padding: 40px;
