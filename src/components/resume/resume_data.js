@@ -1,4 +1,4 @@
-const job_history_data = [
+export const job_history_data = [
   {
     role: "Freelance",
     company: "Meta Lark Design",
@@ -41,7 +41,7 @@ const job_history_data = [
   },
 ]
 
-const skills = [
+export const skills = [
   "User Research",
   "Usability Testing",
   "Interviewing",
@@ -52,7 +52,7 @@ const skills = [
   "Copywriting",
 ]
 
-const tools = [
+export const tools = [
   "Adobe Creative Cloud",
   "Figma",
   "Sketch",
