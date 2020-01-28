@@ -43,14 +43,10 @@ const Title = styled(Title3)`
   padding: 0;
 `
 
-const Piece = props => (
-  <InnerCard>
-    <Title>{props.title}</Title>
-    {props.children}
-  </InnerCard>
-)
-
 const ImageWrapper = styled.div`
+  ${below[900]`
+    padding: 0;
+  `}
   padding-right: 30px;
 `
 

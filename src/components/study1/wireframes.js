@@ -59,7 +59,7 @@ const WideImage = props => {
 const VerticalImage = props => {
   const Image = styled.img`
     padding: 5px;
-    max-width: 145px;
+    max-width: 160px;
   `
   return (
     <ImageWrapper>
