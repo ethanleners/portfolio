@@ -22,6 +22,22 @@ const FlexRow = styled.div`
   justify-content: space-between;
 `
 
+const DownloadResume = styled.a`
+  ${props => `
+      color: ${props.theme.colors.accent};
+    `}
+  ${below[600]`
+    font-size: 18px;
+    line-height: 25px;
+    `}
+    padding-top: 20px;
+  font-family: Heebo, Arial, Roboto, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
+  font-size: 20px;
+  line-height: 29px;
+  align-self: flex-end;
+`
+
 const Title = styled(Title3)`
   ${below[600]`
     margin-top: 20px;
@@ -98,6 +114,13 @@ export const Skills = ({ children }) => {
           ))}
         </FlexCard>
       </FlexRow>
+      <DownloadResume
+        href="https://drive.google.com/open?id=1J3bIOzSgslYzoSsZJn4ky0oBIUuqQWH3"
+        target="_blank"
+        rel="noopener norefferer"
+      >
+        Download
+      </DownloadResume>
     </FlexColumn>
   )
 }

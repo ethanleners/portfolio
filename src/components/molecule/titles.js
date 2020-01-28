@@ -40,9 +40,9 @@ export const Title3 = styled.div`
     line-height: 25px;
     `}
     padding-top: 10px;
-    font-size: 20px;
   font-family: Heebo, Arial, Roboto, Ubuntu, Cantarell, "Open Sans",
     "Helvetica Neue", sans-serif;
+    font-size: 20px;
   line-height: 29px;
 `
 
