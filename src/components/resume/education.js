@@ -20,6 +20,7 @@ const Title = styled(Title3)`
   ${below[600]`
     margin-top: 20px;
     flex-basis: 0;
+    height: auto;
   `}
   padding: 0;
   margin: 0;
@@ -33,6 +34,7 @@ const FlexCard = styled(Card)`
     display: flex;
     flex-direction: column;
     flex-basis: 0;
+    height: auto;
   `}
   margin: 0;
   margin-bottom: 40px;
