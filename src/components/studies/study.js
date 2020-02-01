@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-import { Opener, Statement } from "../study"
+import { Opener, Statement } from "../study-template"
 
 export const Study = ({ children }) => {
   const data = useStaticQuery(graphql`
