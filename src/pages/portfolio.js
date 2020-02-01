@@ -13,7 +13,7 @@ import {
   Wireframes,
   Prototype,
   Conclusion
-} from "../components/study1"
+} from "../components/studies"
 
 const Portfolio = () => {
   return (
