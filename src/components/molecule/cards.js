@@ -22,7 +22,7 @@ ${below[600]`
 `}
 -webkit-transform: translate3d(0, 0, 0);
 transform: translate3d(0, 0, 0);
-z-index: 1000;
+z-index: 900;
 margin: 40px 0;
 box-sizing: border-box;
 padding: 40px;

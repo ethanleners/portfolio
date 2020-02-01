@@ -47,7 +47,7 @@ const Badge = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-
+  z-index: 1000;
   position: absolute;
   top: calc(50% - 17.5px);
   left: -17.5px;

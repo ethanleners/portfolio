@@ -84,6 +84,7 @@ const CaseStudy = () => {
   const Image = styled(Link)`
     max-width: 428px;
     width: 100%;
+    height: auto;
     ${below[900]`
       margin: 0 30px;
     `}

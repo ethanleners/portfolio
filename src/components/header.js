@@ -16,6 +16,9 @@ const Header = ({ siteTitle }) => {
   const MainHeader = styled.header`
     ${props => `background: ${props.theme.colors.header};`};
     height: 50px;
+    width: 100%;
+    font-family: Heebo, Arial, Roboto, Ubuntu, Cantarell, "Open Sans",
+      "Helvetica Neue", sans-serif;
   `
 
   const MenuLink = styled(Link)`

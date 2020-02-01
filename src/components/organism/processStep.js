@@ -19,7 +19,6 @@ const CardFlex = styled.div`
   flex-direction: column;
     margin: 20px;
     height: auto;
-
   `}
   margin: 20px;
   height: 100%;
@@ -71,7 +70,7 @@ const Badge = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-
+  z-index: 1000;
   position: absolute;
   top: 0px;
   left: 0px;

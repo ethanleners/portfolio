@@ -8,13 +8,13 @@ const ProcessWrapper = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+
+  ${Text2} {
+    padding-left: 20px;
+  }
 `
 
-const ProcessText = styled(Text2)`
-  padding-left: 20px;
-`;
-
-export const Process = props => (
+export const Process = () => (
   <>
     <SectionTitle>The Process</SectionTitle>
     <ProcessWrapper>
@@ -23,41 +23,42 @@ export const Process = props => (
         imageText="Empathize with the user"
         number="1"
       >
-        <ProcessText>
-          Starting with <strong>user research</strong> and <strong>storyboarding</strong> allows the
-          team to get a good understanding of the user and how they could
-          interact with the product. Using multiple research methodologies
-          insures that we have robust data.
-        </ProcessText>
+        <Text2>
+          Starting with <strong>user research</strong> and{" "}
+          <strong>storyboarding</strong> allows the team to get a good
+          understanding of the user and how they could interact with the
+          product. Using multiple research methodologies insures that we have
+          robust data.
+        </Text2>
       </ProcessStep>
       <ProcessStep
         image="user"
         imageText="Understand the experience"
         number="2"
       >
-        <ProcessText>
-          Creating detailed <strong>user personas</strong> fosters empathy. Understanding
-          the user to this degree allows us to predict how they might make
-          decisions. This also helps to keep us focused on the user and not on
-          the features.
-        </ProcessText>
+        <Text2>
+          Creating detailed <strong>user personas</strong> fosters empathy.
+          Understanding the user to this degree allows us to predict how they
+          might make decisions. This also helps to keep us focused on the user
+          and not on the features.
+        </Text2>
       </ProcessStep>
       <ProcessStep image="map" imageText="Map user flows" number="3">
-        <ProcessText>
-          Employing the user persona, I create <strong>user flows</strong> to map the
-          actions that a user might take in order to reach their goals. I start
-          with a low-fidelity prototype to iterate quickly and progress to more
-          detailed prototypes as I continue.
-        </ProcessText>
+        <Text2>
+          Employing the user persona, I create <strong>user flows</strong> to
+          map the actions that a user might take in order to reach their goals.
+          I start with a low-fidelity prototype to iterate quickly and progress
+          to more detailed prototypes as I continue.
+        </Text2>
       </ProcessStep>
       <ProcessStep image="design" imageText="Design Prototype" number="4">
-        <ProcessText>
-          Developing a high-fidelity <strong>prototype</strong> allows the stakeholders to
-          experience the product in a form closer to how it will be upon
-          completion.
+        <Text2>
+          Developing a high-fidelity <strong>prototype</strong> allows the
+          stakeholders to experience the product in a form closer to how it will
+          be upon completion.
           <br />
           The process of iteration/user research continues from here.
-        </ProcessText>
+        </Text2>
       </ProcessStep>
     </ProcessWrapper>
   </>
