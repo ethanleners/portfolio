@@ -42,7 +42,7 @@ const Header = ({ siteTitle }) => {
   const EthanName = styled(MenuLink)`
     ${props => `
       background: ${location === "" ? props.theme.colors.accent : "none"};
-      color: ${props.theme.colors.text};
+      color: ${location === "" ? props.theme.colors.emphasis : props.theme.colors.accent};
       `};
   `
 
@@ -51,14 +51,14 @@ const Header = ({ siteTitle }) => {
       background: ${
         location === "portfolio" ? props.theme.colors.accent : "none"
       };
-      color: ${props.theme.colors.text};
+      color: ${location === "portfolio" ? props.theme.colors.emphasis : props.theme.colors.accent};
     `};
   `
 
   const Resume = styled(MenuLink)`
     ${props => `
       background: ${location === "resume" ? props.theme.colors.accent : "none"};
-      color: ${props.theme.colors.text};
+      color: ${location === "resume" ? props.theme.colors.emphasis : props.theme.colors.accent};
     `};
   `
 

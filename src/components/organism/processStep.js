@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-import { Card, Text1 } from "../molecule"
+import { Card, HigherCard, Text1 } from "../molecule"
 import { below } from "../../utilities"
 
 import design from "../../images/design.svg"
@@ -9,7 +9,7 @@ import experience from "../../images/experience.svg"
 import map from "../../images/map.svg"
 import user from "../../images/user.svg"
 
-const CardFlex = styled.div`
+const CardFlex = styled(Card)`
   ${props => `
     background: ${props.theme.colors.overlay};
     color: ${props.theme.colors.text};
@@ -39,7 +39,7 @@ const CardWrapper = styled.div`
   height: 100%;
 `
 
-const ImageCard = styled(Card)`
+const ImageCard = styled(HigherCard)`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -59,10 +59,10 @@ const ImageText = styled(Text1)`
   text-align: center;
 `
 
-const Badge = styled.div`
+const Badge = styled(Card)`
   ${props => `
     background: ${props.theme.colors.accent};
-    color: ${props.theme.colors.text};
+    color: ${props.theme.colors.emphasis};
   `}
   border-radius: 50%;
   width: 70px;
@@ -74,6 +74,7 @@ const Badge = styled.div`
   position: absolute;
   top: 0px;
   left: 0px;
+  margin: 0;
   font-size: 30px;
   font-family: Heebo, Arial, Roboto, Ubuntu, Cantarell, "Open Sans",
     "Helvetica Neue", sans-serif;

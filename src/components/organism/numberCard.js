@@ -1,10 +1,10 @@
 import React from "react"
 import styled from "styled-components"
 
-import { Text2List } from "../molecule"
+import { Text2List, Card, HigherCard } from "../molecule"
 import { below } from "../../utilities"
 
-const CardFlex = styled.div`
+const CardFlex = styled(HigherCard)`
   ${props => `
     background: ${props.theme.colors.overlay};
     color: ${props.theme.colors.text};
@@ -39,12 +39,13 @@ const CardWrapper = styled.div`
 const Badge = styled.div`
   ${props => `
     background: ${props.theme.colors.social};
-    color: ${props.theme.colors.text};
+    color: ${props.theme.colors.emphasis};
   `}
   border-radius: 50%;
   width: 35px;
   height: 35px;
   display: flex;
+  margin:0;
   align-items: center;
   justify-content: center;
   z-index: 1000;

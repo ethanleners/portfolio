@@ -19,7 +19,7 @@ const Image = styled.div`
       margin: 0 30px;
     `}
 `
-const CardWrapper = styled.div`
+const CardWrapper = styled(Card)`
   ${props => `
     background: ${props.theme.colors.overlay};
   `}
@@ -27,7 +27,7 @@ const CardWrapper = styled.div`
   flex-direction: column;
 `
 
-const CardFlex = styled(Card)`
+const CardFlex = styled.div`
   ${below[900]`
     flex-direction: column;
     align-items: center;

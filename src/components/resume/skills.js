@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-import { Title3, Card, Text2, Text2List, SectionCaption } from "../molecule"
+import { Title3, HigherCard, Text2, Text2List, SectionCaption } from "../molecule"
 import { below } from "../../utilities"
 import { skills, tools, job_history_data } from "./resume_data"
 
@@ -50,7 +50,7 @@ const Title = styled(Title3)`
   flex-grow: 1;
 `
 
-const FlexCard = styled(Card)`
+const FlexCard = styled(HigherCard)`
   ${below[600]`
     margin: 0;
     display: flex;

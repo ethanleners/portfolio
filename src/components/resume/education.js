@@ -1,8 +1,18 @@
 import React from "react"
 import styled from "styled-components"
 
-import { Title3, Card, Text2, SectionCaption } from "../molecule"
+import { Title3, HigherCard, Text2, Title1, Text2List } from "../molecule"
 import { below } from "../../utilities"
+
+const FlexHeader = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+`
+
+const ResumeTitle = styled(Title1)`
+  margin-top: 40px;
+`
 
 const FlexRow = styled.div`
   ${below[600]`
@@ -28,7 +38,7 @@ const Title = styled(Title3)`
   flex-grow: 1;
 `
 
-const FlexCard = styled(Card)`
+const FlexCard = styled(HigherCard)`
   ${below[600]`
     margin: 0;
     display: flex;
@@ -51,9 +61,11 @@ const education = [
 export const Education = ({ children }) => {
   return (
     <>
-    <br/>
-    <br/>
-
+      <FlexHeader>
+        <ResumeTitle>Resume</ResumeTitle>
+      </FlexHeader>
+      <br />
+      <br />
       <FlexRow>
         <Title>Employment Objectives</Title>
         <FlexCard>
@@ -64,12 +76,11 @@ export const Education = ({ children }) => {
           </Text2>
         </FlexCard>
       </FlexRow>
-
       <FlexRow>
         <Title>Education</Title>
         <FlexCard>
           {education.map((item, i) => (
-            <Text2 key={i + 200}>{item}</Text2>
+            <Text2List key={i + 200}>{item}</Text2List>
           ))}
         </FlexCard>
       </FlexRow>

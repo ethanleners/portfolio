@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-import { Title3, Card, Text2List } from "../molecule"
+import { Title3, Card, HigherCard, Text2List } from "../molecule"
 import { below } from "../../utilities"
 
 const OuterCard = styled(Card)`
@@ -9,7 +9,7 @@ const OuterCard = styled(Card)`
   flex-direction: column;
 `
 
-const InnerCard = styled(Card)`
+const InnerCard = styled(HigherCard)`
   ${below[900]`
     margin: 0 0 20px 0;
     padding: 3%;

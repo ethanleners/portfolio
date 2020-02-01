@@ -29,6 +29,7 @@ const Footer = () => {
   `
 
   const A = styled.a`
+    ${props => `color: ${props.theme.colors.accent};`};
     text-decoration: none;
     display: flex;
     flex-direction: column;

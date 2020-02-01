@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-import { SectionCaption, Title3, Card, Text1, Text2List } from "../molecule"
+import { SectionCaption, Title3, Card, HigherCard, Text1, Text2List } from "../molecule"
 import { below } from "../../utilities"
 import { MatthewImage, AmyImage } from "../atom"
 
@@ -51,7 +51,7 @@ const Needs = props => {
   )
 }
 
-const InnerCard = styled(Card)`
+const InnerCard = styled(HigherCard)`
   ${below[900]`
     flex: 0 100%;
     margin: 0 0 20px 0;
