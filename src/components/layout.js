@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import colors from "../utilities/Colors"
+import { theme } from "../utilities/Theme"
 import styled, { createGlobalStyle, ThemeProvider } from "styled-components"
 
 import Header from "./header"
@@ -14,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     height: 100%;
-    background: #191A2A;
+    background: ${({ theme }) => theme.colors.background};
 }
 `
 
@@ -36,7 +36,7 @@ const Layout = ({ children }) => {
   `
 
   return (
-    <ThemeProvider theme={{ colors }}>
+    <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Header siteTitle={data.site.siteMetadata.title} />
       <Main>{children}</Main>

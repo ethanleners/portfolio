@@ -6,5 +6,5 @@ module.exports = {
   overlay: "rgba(255, 255, 255, 0.12)",
   header: "rgba(255, 255, 255, 0.12)",
   emphasis: "#FFFFFF",
-  social: "#435AD5"
+  social: "#435AD5",
 }
