@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { below } from "../../utilities"
-import {Title3 } from "../molecule"
+import { Title3 } from "../molecule"
 
 export const Text1 = styled.div`
   ${props => `

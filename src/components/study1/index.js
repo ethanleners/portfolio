@@ -1,4 +1,4 @@
-export * from "./opener"
+export * from "./study"
 export * from "./process"
 export * from "./research"
 export * from "./statement"

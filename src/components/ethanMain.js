@@ -3,8 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
 import { below } from "../utilities"
-import { Title1, Text1, Text1List } from "./molecule"
-
+import { Title1, Text1, Text1List, Card, HigherCard } from "./molecule"
 
 const EthanMain = () => {
   const data = useStaticQuery(graphql`
@@ -19,28 +18,39 @@ const EthanMain = () => {
     }
   `)
 
-  const EthanMainCard = styled.div`
-    ${props => `
-      background: linear-gradient(90deg, ${props.theme.colors.background} 10%, ${props.theme.colors.overlay} 10%);
-      color: ${props.theme.colors.text};
-      `}
+  const EthanBackgroundCard = styled(Card)`
+    ${below[900]`
+      /* flex-direction: column; */
+      margin: 0%;
+      width: 100%;
+      height: 90%;
+      top: 5%;
+      left: 0;
+    `}
+
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    top: -40px;
+    left: 10%;
+    z-index: -1;
+  `
+
+  const EthanMainCard = styled(Card)`
 
     ${below[900]`
       flex-direction: column;
       margin: 5%;
-
-      ${props => `
-        background: linear-gradient(180deg, ${props.theme.colors.background} 10%, ${props.theme.colors.overlay} 10%);
-        color: ${props.theme.colors.text};
-        `}
     `}
 
     ${below[600]`
       flex-direction: column;
       margin: 1%;
-      padding: 5%;
+      padding: 0;
     `}
 
+    box-shadow: none;
+    padding: 0;
     margin-top: 80px;
     box-sizing: border-box;
     display: flex;
@@ -52,11 +62,14 @@ const EthanMain = () => {
   const Bio = styled.div`
     ${below[900]`
       flex-direction: column;
+      align-items: center;
       width: auto;
+      width: 100%;
       padding: 50px 0;
     `}
     ${below[600]`
       flex-direction: column;
+      width: 100%;
       padding: 20px 0;
     `}
     width: calc(100% - 300px);
@@ -67,7 +80,7 @@ const EthanMain = () => {
     box-sizing: border-box;
   `
 
-  const List = styled.div`
+  const List = styled(HigherCard)`
     ${props => `
       background: ${props.theme.colors.overlay};
       color: ${props.theme.colors.text};
@@ -75,6 +88,7 @@ const EthanMain = () => {
     font-family: Montserrat, Heebo, Arial, Roboto, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
       sans-serif;
     padding: 20px;
+    margin: 20px 0 0 0;
   `
 
   const EthanImage = styled(Img)`
@@ -98,11 +112,12 @@ const EthanMain = () => {
 
   return (
     <EthanMainCard>
+      <EthanBackgroundCard></EthanBackgroundCard>
       <EthanImage fluid={data.placeholderImage.childImageSharp.fluid} />
       <Bio>
         <Title1>I’m Ethan Leners</Title1>
         <TextTitle>UI | UX DESIGNER</TextTitle>
-        <TextTitle style={{paddingBottom: '10px'}}>WRITER</TextTitle>
+        <TextTitle style={{ paddingBottom: "10px" }}>WRITER</TextTitle>
         <List>
           <Text1List>*long-time people pleaser</Text1List>
           <Text1List>*advocate for accessibility</Text1List>

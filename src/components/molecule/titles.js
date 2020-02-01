@@ -10,7 +10,7 @@ export const Title1 = styled.div`
     line-height: 40px;
     `}
     padding-top: 20px;
-    font-size: 34px;
+  font-size: 34px;
   font-family: Heebo, Arial, Roboto, Ubuntu, Cantarell, "Open Sans",
     "Helvetica Neue", sans-serif;
   line-height: 50px;
@@ -25,7 +25,7 @@ export const Title2 = styled.div`
     line-height: 29px;
     `}
     padding-top: 15px;
-    font-size: 28px;
+  font-size: 28px;
   font-family: Heebo, Arial, Roboto, Ubuntu, Cantarell, "Open Sans",
     "Helvetica Neue", sans-serif;
   line-height: 36px;
@@ -39,10 +39,9 @@ export const Title3 = styled.div`
     font-size: 18px;
     line-height: 25px;
     `}
-    padding-top: 10px;
   font-family: Heebo, Arial, Roboto, Ubuntu, Cantarell, "Open Sans",
     "Helvetica Neue", sans-serif;
-    font-size: 20px;
+  font-size: 20px;
   line-height: 29px;
 `
 

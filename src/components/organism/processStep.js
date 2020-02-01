@@ -59,7 +59,7 @@ const ImageText = styled(Text1)`
   text-align: center;
 `
 
-const Badge = styled(Card)`
+const Badge = styled.div`
   ${props => `
     background: ${props.theme.colors.accent};
     color: ${props.theme.colors.emphasis};

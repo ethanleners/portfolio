@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
 import { NumberCard } from "../organism"
-import { SectionTitle, Title3, Card } from "../molecule"
+import { SectionTitle, Title3, Card, HigherCard } from "../molecule"
 import { below } from "../../utilities"
 
 const OuterCard = styled(Card)`
@@ -13,7 +13,7 @@ const OuterCard = styled(Card)`
   flex-direction: column;
 `
 
-const InnerCard = styled(Card)`
+const InnerCard = styled(HigherCard)`
   ${below[900]`
     margin: 0 0 20px 0;
     padding: 3%;
