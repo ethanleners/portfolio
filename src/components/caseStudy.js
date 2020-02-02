@@ -6,7 +6,10 @@ import styled from "styled-components"
 import { below } from "../utilities"
 import { Title1, Text1, Card } from "./molecule"
 
-const caseStudyUrl = "/portfolio"
+const caseStudyUrls = {
+  friendly: "/portfolio/friendly",
+  notice: "/portfolio/notice",
+}
 
 const CaseStudyCard = styled(Card)`
 ${props => `
@@ -82,19 +85,32 @@ const CaseStudy = () => {
   `
 
   const Image = styled(Link)`
-    max-width: 428px;
-    width: 100%;
-    height: auto;
     ${below[900]`
       margin: 0 30px;
+      padding-right: 0;
     `}
+
+    ${props =>
+      props.caseStudy === "notice"
+        ? `max-width: 292px;
+        padding-right: 50px;`
+        : `max-width: 428px;`}
+    width: 100%;
+    max-height: 402px;
   `
 
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "friendly2.png" }) {
+      friendly: file(relativePath: { eq: "friendly2.png" }) {
         childImageSharp {
           fluid(maxWidth: 428) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      notice: file(relativePath: { eq: "Preview_Notice.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 292) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -102,13 +118,13 @@ const CaseStudy = () => {
     }
   `)
 
-  const CaseStudyImage = () => (
-    <Image to={caseStudyUrl}>
-      <Img fluid={data.file.childImageSharp.fluid} />
+  const CaseStudyImage = props => (
+    <Image caseStudy={props.caseStudy} to={props.caseStudyUrl}>
+      {props.image}
     </Image>
   )
 
-  const Title = ({ children }) => {
+  const Title = props => {
     const TitleLink = styled(Link)`
       text-decoration: none;
 
@@ -120,24 +136,52 @@ const CaseStudy = () => {
       }
     `
     return (
-      <TitleLink to={caseStudyUrl}>
-        <Title1>{children}</Title1>
+      <TitleLink to={props.caseStudyUrl}>
+        <Title1>{props.children}</Title1>
       </TitleLink>
     )
   }
 
   return (
-    <CaseStudyCard>
-      <CaseStudyImage />
-      <StudyText>
-        <Title>Case Study: Friendly</Title>
-        <Text1>
-          A social media networking app that offers skill-building opportunities
-          to help make deep, lasting friendships.
-        </Text1>
-        <Call to={caseStudyUrl}>Read Case Study →</Call>
-      </StudyText>
-    </CaseStudyCard>
+    <>
+      <CaseStudyCard>
+        <CaseStudyImage
+          image={
+            <Img
+              style={{ maxHeight: "402px;" }}
+              fluid={data.friendly.childImageSharp.fluid}
+            />
+          }
+          caseStudyUrl={caseStudyUrls.friendly}
+          caseStudy="friendly"
+        />
+        <StudyText>
+          <Title caseStudyUrl={caseStudyUrls.friendly}>
+            Case Study: Friendly
+          </Title>
+          <Text1>
+            A social media networking app that offers skill-building
+            opportunities to help make deep, lasting friendships.
+          </Text1>
+          <Call to={caseStudyUrls.friendly}>Read Case Study →</Call>
+        </StudyText>
+      </CaseStudyCard>
+      <CaseStudyCard>
+        <CaseStudyImage
+          image={<Img fluid={data.notice.childImageSharp.fluid} />}
+          caseStudyUrl={caseStudyUrls.notice}
+          caseStudy="notice"
+        />
+        <StudyText>
+          <Title caseStudyUrl={caseStudyUrls.notice}>Case Study: Notice</Title>
+          <Text1>
+            Notice is a mobile app designed to develop and facilitate the
+            mindfulness technique of "noticing".
+          </Text1>
+          <Call to={caseStudyUrls.notice}>Read Case Study →</Call>
+        </StudyText>
+      </CaseStudyCard>
+    </>
   )
 }
 
