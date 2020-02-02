@@ -20,10 +20,10 @@ export const Process = props => (
     <ProcessWrapper>
       {props.steps.map((step, i) => (
         <ProcessStep
+          key={`c${i}`}
           image={step.image}
           imageText={step.imageText}
           number={step.number}
-          key={`c${i}`}
         >
           <Text2>{step.text}</Text2>
         </ProcessStep>

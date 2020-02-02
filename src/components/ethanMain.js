@@ -23,8 +23,8 @@ const EthanMain = () => {
       /* flex-direction: column; */
       margin: 0%;
       width: 100%;
-      height: 90%;
-      top: 5%;
+      height: 98%;
+      top: -1%;
       left: 0;
     `}
 
@@ -37,7 +37,6 @@ const EthanMain = () => {
   `
 
   const EthanMainCard = styled(Card)`
-
     ${below[900]`
       flex-direction: column;
       margin: 5%;
@@ -46,7 +45,8 @@ const EthanMain = () => {
     ${below[600]`
       flex-direction: column;
       margin: 1%;
-      padding: 0;
+      margin-top: 5%;
+      padding: 0 10px;
     `}
 
     box-shadow: none;
