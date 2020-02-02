@@ -7,12 +7,12 @@ import {
   Statement,
   Process,
   Research,
-  StoryBoardStudy1,
-  Personas,
-  UserFlows1,
-  Wireframes1,
-  Prototype1,
-  Conclusion,
+  StoryBoardStudy2,
+  Personas2,
+  UserFlows2,
+  Wireframes2,
+  Prototype2,
+  Conclusion2,
 } from "../study-template"
 
 export const Study2 = ({ children }) => {
@@ -32,13 +32,14 @@ export const Study2 = ({ children }) => {
     {
       header: "What is it?",
       text: [
-        "Friendly is a social media networking app that offers skill-building opportunities to help make deep, lasting friendships.",
+        'Notice is a mobile app designed to develop and facilitate the mindfulness technique of "noticing". Intrusive thoughts can really disrupt your day and taking time to notice these thoughts can help move past them. The Notice app has physical cues to help you notice free of judgment.',
       ],
     },
     {
       header: "My Role:",
       text: [
         "Lead storyboarding and conducted user research",
+        "User Experience Design: creating user flows and wireframes",
         "Created high fidelity wireframes to better demonstrate experience",
       ],
     },
@@ -48,20 +49,20 @@ export const Study2 = ({ children }) => {
     {
       header: "User/Business Problem:",
       text: [
-        "Making and maintaining friendships as an adult can be difficult.",
+        "Intrusive thoughts and anxieties can make it feel like you are out of control. ",
       ],
     },
     {
       header: "Objectives:",
       text: [
-        "Develop an app that offers the user opportunities to develop new friendships as well as skill-building content.",
+        "Develop an app to guide mindfulness practices in a non-judgmental way.",
       ],
     },
     {
       header: "Challenges:",
       text: [
-        "Overabundance of social networking apps.",
-        "Limited time to spend on self-development.",
+        "Mobile devices can be the source of distractions.",
+        "How do we encourage the use of the app without becoming intrusive?",
       ],
     },
   ]
@@ -127,21 +128,18 @@ export const Study2 = ({ children }) => {
       header: "Quantitative Research:",
       text: [
         <>
-          Surveys were conducted of age-specific audiences to identify
-          population groups who report the most difficulty in making and
-          sustaining friendships. Results suggested that{" "}
-          <strong>adults around the ages of 24-45 would benefit most</strong>{" "}
-          from support in making friends.
+          A <strong>survey</strong> of users actively using meditation
+          applications was conducted.{" "}
+          <strong>
+            A majority of users reported being overwhelmed by features
+          </strong>
+          . Participants who reported experiencing anxiety also reported a need
+          for simple tools to build coping skills.
         </>,
         <></>,
         <>
-          Participants were also surveyed on dissatisfaction with features of
-          other social media applications.{" "}
-          <strong>
-            A majority of participants reported being dissatisfied
-          </strong>{" "}
-          with features that defined groups by age, gender, workplace, or school
-          as qualifiers for potential friendship matches.
+          Additionally, we compared features of comparable apps with their
+          number of downloads.
         </>,
       ],
     },
@@ -149,14 +147,12 @@ export const Study2 = ({ children }) => {
       header: "Qualitative Research:",
       text: [
         <>
-          User interviews provided insights into the pain points of our target
-          audience. The resulting data suggested that alternative social media
-          applications do not provide learning opportunities and often value
-          superficial metrics when browsing potential matches.{" "}
-          <strong>
-            Participants indicated that they would find value in alternative
-            features.
-          </strong>
+          After forming a <strong>focus group</strong> of users interested in
+          mindfulness, we discovered that users prefer meditation tools that
+          aren’t bogged down by too many features. Users expressed a{" "}
+          <strong>preference for a simple user interface</strong>. Users
+          attempting to build mindful practices want solutions that are easy to
+          learn.
         </>,
       ],
     },
@@ -172,7 +168,6 @@ export const Study2 = ({ children }) => {
 
   const ConclusionCopy = {
     title: "Next Steps",
-
   }
 
   return (
@@ -191,12 +186,12 @@ export const Study2 = ({ children }) => {
         copy={ResearchCopyBoxes}
         closer={ResearchCopyCloser}
       />
-      <StoryBoardStudy1 />
-      <Personas />
-      <UserFlows1 />
-      <Wireframes1 />
-      <Prototype1 />
-      <Conclusion />
+      <StoryBoardStudy2 />
+      <Personas2 />
+      <UserFlows2 />
+      <Wireframes2 />
+      <Prototype2 />
+      <Conclusion2 />
     </>
   )
 }

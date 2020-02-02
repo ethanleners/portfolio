@@ -8,11 +8,11 @@ import {
   Process,
   Research,
   StoryBoardStudy1,
-  Personas,
+  Personas1,
   UserFlows1,
   Wireframes1,
   Prototype1,
-  Conclusion,
+  Conclusion1,
 } from "../study-template"
 
 export const Study1 = ({ children }) => {
@@ -39,6 +39,7 @@ export const Study1 = ({ children }) => {
       header: "My Role:",
       text: [
         "Lead storyboarding and conducted user research",
+        "User Experience Design: creating user flows and wireframes",
         "Created high fidelity wireframes to better demonstrate experience",
       ],
     },
@@ -192,11 +193,11 @@ export const Study1 = ({ children }) => {
         closer={ResearchCopyCloser}
       />
       <StoryBoardStudy1 />
-      <Personas />
+      <Personas1 />
       <UserFlows1 />
       <Wireframes1 />
       <Prototype1 />
-      <Conclusion />
+      <Conclusion1 />
     </>
   )
 }

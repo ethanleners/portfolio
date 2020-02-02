@@ -70,7 +70,7 @@ const amyInfo = {
   ],
 }
 
-export const Personas = () => (
+export const Personas1 = () => (
   <>
     <SectionTitle>User Personas</SectionTitle>
     <InnerCard>
