@@ -20,10 +20,10 @@ const EthanMain = () => {
 
   const EthanBackgroundCard = styled(Card)`
     ${below[900]`
-      /* flex-direction: column; */
       box-shadow: none;
       width: 10%;
       height: 10%;
+      display: none;
     `}
     position: absolute;
     width: 90%;
