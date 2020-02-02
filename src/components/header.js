@@ -37,6 +37,11 @@ const Header = ({ siteTitle }) => {
     ${below[500]`
       /* padding: 0 5px; */
     `}
+
+    ${props => `
+      background: none;
+      color: ${props.theme.colors.accent};
+    `};
   `
 
   const EthanName = styled(MenuLink)`
@@ -98,12 +103,12 @@ const Header = ({ siteTitle }) => {
   return (
     <MainHeader>
       <FlexRowOuter>
-        <EthanName to="/" style={{}}>
+        <MenuLink activeClassName="active" to="/" style={{}}>
           Ethan Leners
-        </EthanName>
-        <FlexRow>
-          <Portfolio to="/portfolio">Portfolio</Portfolio>
-          <Resume to="/resume">Resume</Resume>
+        </MenuLink>
+        <FlexRow >
+          <MenuLink activeClassName="active" to="/portfolio">Portfolio</MenuLink>
+          <MenuLink activeClassName="active" to="/resume">Resume</MenuLink>
           {/* <Blog to="/">Blog</Blog> */}
         </FlexRow>
       </FlexRowOuter>

@@ -15,6 +15,11 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     height: 100%;
     background: ${({ theme }) => theme.colors.background};
+
+  .active {
+    background: ${({ theme }) => theme.colors.accent};
+    color: ${({ theme }) => theme.colors.emphasis};
+  }
 }
 `
 
