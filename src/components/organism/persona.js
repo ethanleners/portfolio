@@ -1,11 +1,20 @@
 import React from "react"
 import styled from "styled-components"
 
-import { SectionCaption, Title3, Card, HigherCard, Text1, Text2List } from "../molecule"
+import {
+  SectionCaption,
+  Title3,
+  InnerCard,
+  Text1,
+  Text2List,
+} from "../molecule"
 import { below } from "../../utilities"
-import { MatthewImage, AmyImage } from "../atom"
 
-const HeaderImage = props => {
+const PersonaHead = props => {
+  const HeaderText = styled(Text1)`
+    align-self: center;
+    text-align: center;
+  `
   const Wrapper = styled.div`
     display: flex;
     flex-direction: row;
@@ -14,23 +23,9 @@ const HeaderImage = props => {
     align-content: center;
     padding-bottom: 20px;
   `
-
-  return (
-    <Wrapper>
-      {props.persona === "Amy" && <AmyImage></AmyImage>}
-      {props.persona === "Matthew" && <MatthewImage></MatthewImage>}
-    </Wrapper>
-  )
-}
-
-const PersonaHead = props => {
-  const HeaderText = styled(Text1)`
-    align-self: center;
-    text-align: center;
-  `
   return (
     <>
-      <HeaderImage persona={props.persona}></HeaderImage>
+      <Wrapper>{props.image}</Wrapper>
       <SectionCaption>{props.persona}</SectionCaption>
       <HeaderText>{props.headline}</HeaderText>
     </>
@@ -51,7 +46,7 @@ const Needs = props => {
   )
 }
 
-const InnerCard = styled(HigherCard)`
+const PersonaCard = styled(InnerCard)`
   ${below[900]`
     flex: 0 100%;
     margin: 0 0 20px 0;
@@ -71,13 +66,14 @@ const InnerCard = styled(HigherCard)`
 `
 
 export const Persona = props => (
-  <InnerCard>
+  <PersonaCard>
     <PersonaHead
       persona={props.persona}
       headline={props.headline}
+      image={props.image}
     ></PersonaHead>
     <Needs heading="Needs to accomplish:" needs={props.info.accomplish} />
     <Needs heading="Needs to feel:" needs={props.info.feel} />
     <Needs heading="Things to consider:" needs={props.info.consider} />
-  </InnerCard>
+  </PersonaCard>
 )

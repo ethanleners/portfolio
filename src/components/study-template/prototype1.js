@@ -4,7 +4,15 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
 import { NumberCard } from "../organism"
-import { Card, Text2, SectionTitle } from "../molecule"
+import {
+  CardText,
+  SlimCardColumn,
+  Text2,
+  SectionTitle,
+  ImagesWrapper,
+  ImageWrapper,
+  ImageWithText,
+} from "../molecule"
 import { below } from "../../utilities"
 
 import article from "../../images/Prototype_read.png"
@@ -12,22 +20,7 @@ import browse from "../../images/Prototype_browse.png"
 import chat from "../../images/Prototype_chat.png"
 import edit from "../../images/Prototype_profile.png"
 
-const Image = styled.div`
-  max-width: 315px;
-  width: 100%;
-  ${below[900]`
-      margin: 0 30px;
-    `}
-`
-const CardWrapper = styled(Card)`
-  ${props => `
-    background: ${props.theme.colors.overlay};
-  `}
-  display: flex;
-  flex-direction: column;
-`
-
-const CardFlex = styled.div`
+const OuterCardRow = styled.div`
   ${below[900]`
     flex-direction: column;
     align-items: center;
@@ -54,27 +47,6 @@ const CardFlex = styled.div`
   align-items: center;
 `
 
-const CardText = styled.div`
-  ${below[900]`
-  flex-direction: column;
-  width: auto;
-  padding: 50px 50px;
-  `}
-  ${below[600]`
-  flex-direction: column;
-  width: auto;
-  padding: 10px 10px;
-  `}
-  width: calc(100% - 300px);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-end;
-  padding: 0 0 0 40px;
-  height: 100%;
-  box-sizing: border-box;
-`
-
 const VerticalImage = props => {
   const Image = styled.img`
     ${below[600]`
@@ -92,22 +64,14 @@ const VerticalImage = props => {
   )
 }
 
-const ImageWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`
+const imageSizes = {
+  vertical: {
+    maxWidth: "160px",
+    smallMaxWidth: "115px",
+  },
+}
 
-const ImagesWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  flex-wrap: wrap;
-`
-
-export const Prototype = ({ children }) => {
+export const Prototype1 = ({ children }) => {
   const data = useStaticQuery(graphql`
     query {
       home: file(relativePath: { eq: "prototype_homefeatures.png" }) {
@@ -123,11 +87,11 @@ export const Prototype = ({ children }) => {
   return (
     <>
       <SectionTitle>Prototype</SectionTitle>
-      <CardWrapper>
-        <CardFlex>
-          <Image to="/">
+       <SlimCardColumn>
+        <OuterCardRow>
+          <ImageWrapper maxWidth="315px" to="/">
             <Img fluid={data.home.childImageSharp.fluid} />
-          </Image>
+          </ImageWrapper>
           <CardText>
             <NumberCard
               number="1"
@@ -150,20 +114,34 @@ export const Prototype = ({ children }) => {
               text="Quickly find more friends! Search by hobby, interest, location, etc."
             />
           </CardText>
-        </CardFlex>
+        </OuterCardRow>
         <ImagesWrapper>
-          <VerticalImage image={browse} description="Browse"></VerticalImage>
-          <VerticalImage image={chat} description="Chat"></VerticalImage>
-          <VerticalImage
+          <ImageWithText
+            maxWidth={imageSizes.vertical.maxWidth}
+            smallMaxWidth={imageSizes.vertical.smallMaxWidth}
+            image={browse}
+            description="Browse"
+          ></ImageWithText>
+          <ImageWithText
+            maxWidth={imageSizes.vertical.maxWidth}
+            smallMaxWidth={imageSizes.vertical.smallMaxWidth}
+            image={chat}
+            description="Chat"
+          ></ImageWithText>
+          <ImageWithText
+            maxWidth={imageSizes.vertical.maxWidth}
+            smallMaxWidth={imageSizes.vertical.smallMaxWidth}
             image={article}
             description="Daily Reading"
-          ></VerticalImage>
-          <VerticalImage
+          ></ImageWithText>
+          <ImageWithText
+            maxWidth={imageSizes.vertical.maxWidth}
+            smallMaxWidth={imageSizes.vertical.smallMaxWidth}
             image={edit}
             description="Edit Profile"
-          ></VerticalImage>
+          ></ImageWithText>
         </ImagesWrapper>
-      </CardWrapper>
+       </SlimCardColumn>
     </>
   )
 }

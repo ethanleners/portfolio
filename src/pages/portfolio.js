@@ -3,12 +3,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import {
-  Study,
-  Statement,
-  Process,
-  Research,
-  StoryBoard,
-  Personas,
+  Study1,
   UserFlows,
   Wireframes,
   Prototype,
@@ -19,16 +14,7 @@ const Portfolio = () => {
   return (
     <Layout>
       <SEO title="Blog posts" />
-      <Study />
-      <Statement />
-      <Process />
-      <Research />
-      <StoryBoard />
-      <Personas />
-      <UserFlows />
-      <Wireframes />
-      <Prototype />
-      <Conclusion />
+      <Study1 />
     </Layout>
   )
 }

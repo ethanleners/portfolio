@@ -9,7 +9,7 @@ import experience from "../../images/experience.svg"
 import map from "../../images/map.svg"
 import user from "../../images/user.svg"
 
-const CardFlex = styled(Card)`
+const OuterCardRow = styled(Card)`
   ${props => `
     background: ${props.theme.colors.overlay};
     color: ${props.theme.colors.text};
@@ -104,13 +104,13 @@ export const ProcessStep = props => {
   return (
     <CardWrapper>
       <Badge>{props.number}</Badge>
-      <CardFlex>
+      <OuterCardRow>
         <ImageCard>
           <Image image={props.image} />
           <ImageText>{props.imageText}</ImageText>
         </ImageCard>
         {props.children}
-      </CardFlex>
+      </OuterCardRow>
     </CardWrapper>
   )
 }

@@ -4,6 +4,7 @@ import styled from "styled-components"
 import { SectionTitle, Card } from "../molecule"
 import { below } from "../../utilities"
 import { Persona } from "../organism"
+import { MatthewImage, AmyImage } from "../atom"
 
 const InnerCard = styled(Card)`
   ${below[900]`
@@ -75,11 +76,13 @@ export const Personas = () => (
     <InnerCard>
       <Persona
         persona="Matthew"
+        image={<MatthewImage />}
         headline="Young adult looking to try a new hobby and make friends."
         info={matthewInfo}
       ></Persona>
       <Persona
         persona="Amy"
+        image={<AmyImage />}
         headline="Moved to a new city and wants to make friends in the area."
         info={amyInfo}
       ></Persona>

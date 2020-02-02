@@ -1,38 +1,34 @@
 import React from "react"
-import PropTypes from "prop-types"
 import styled from "styled-components"
 
 import {
   Title1,
   Title3,
-  Text2,
   Text2List,
   TextEmphasis,
-  CardText,
-  CardFlex,
   ImageWrapper,
+  CardText,
+  OuterCardRow,
 } from "../molecule"
-import { below } from "../../utilities"
 
-const OpenerCard = styled(CardFlex)`
+const OpenerCard = styled(OuterCardRow)`
   box-shadow: none;
   margin: 0;
-  padding-bottom: 0;
 `
 
 export const Opener = props => {
   return (
     <OpenerCard>
-      <ImageWrapper to="/">{props.image}</ImageWrapper>
+      <ImageWrapper maxWidth="307px" to="/">{props.image}</ImageWrapper>
       <CardText>
         <Title1>{props.title}</Title1>
-        {props.copy.map(point => (
-          <>
+        {props.copy.map((point, i) => (
+          <div key={i*10} style={{ padding: "10px 0" }}>
             <Title3>{point.header}</Title3>
-            {point.text.map(text => (
-              <Text2List>{text}</Text2List>
+            {point.text.map((text, i) => (
+              <Text2List key={i*100}>{text}</Text2List>
             ))}
-          </>
+          </div>
         ))}
         <TextEmphasis>{props.emphasis}</TextEmphasis>
       </CardText>

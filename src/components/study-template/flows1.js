@@ -4,48 +4,16 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
 import { NumberCard } from "../organism"
-import { SectionTitle, Title3, Card, HigherCard } from "../molecule"
-import { below } from "../../utilities"
+import {
+  SectionTitle,
+  Title3,
+  InnerCard,
+  SlimCardColumn,
+  ProcessWrapper,
+  FullSizeImageWrapper,
+} from "../molecule"
 
-const OuterCard = styled(Card)`
-  margin-top: 0px;
-  display: flex;
-  flex-direction: column;
-`
-
-const InnerCard = styled(HigherCard)`
-  ${below[900]`
-    margin: 0 0 20px 0;
-    padding: 3%;
-  `}
-  ${below[600]`
-    margin: 0 0 10px 0;
-    padding: 3%;
-  `}
-  margin: 0 0 30px 0;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-
-  &:last-of-type {
-    margin-bottom: 0;
-  }
-`
-const ProcessWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin: 10px;
-`
-
-const ImageWrapper = styled.div`
-  ${below[900]`
-    padding: 0;
-  `}
-  padding-right: 30px;
-`
-
-export const UserFlows = ({ children }) => {
+export const UserFlows1 = ({ children }) => {
   const data = useStaticQuery(graphql`
     query {
       amy: file(relativePath: { eq: "Amy_userflow.png" }) {
@@ -70,21 +38,21 @@ export const UserFlows = ({ children }) => {
   `
 
   const AmyFlow = () => (
-    <ImageWrapper>
+    <FullSizeImageWrapper>
       <Img fluid={data.amy.childImageSharp.fluid} />
-    </ImageWrapper>
+    </FullSizeImageWrapper>
   )
 
   const MatthewFlow = () => (
-    <ImageWrapper>
+    <FullSizeImageWrapper>
       <Img fluid={data.matthew.childImageSharp.fluid} />
-    </ImageWrapper>
+    </FullSizeImageWrapper>
   )
 
   return (
     <>
       <SectionTitle>User Flows</SectionTitle>
-      <OuterCard>
+       <SlimCardColumn>
         <InnerCard>
           <Title>Matthew</Title>
           <MatthewFlow></MatthewFlow>
@@ -125,7 +93,7 @@ export const UserFlows = ({ children }) => {
             />
           </ProcessWrapper>
         </InnerCard>
-      </OuterCard>
+       </SlimCardColumn>
     </>
   )
 }

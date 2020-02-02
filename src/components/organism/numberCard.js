@@ -4,7 +4,7 @@ import styled from "styled-components"
 import { Text2List, Card, HigherCard } from "../molecule"
 import { below } from "../../utilities"
 
-const CardFlex = styled(HigherCard)`
+const OuterCardRow = styled(HigherCard)`
   ${props => `
     background: ${props.theme.colors.overlay};
     color: ${props.theme.colors.text};
@@ -59,9 +59,9 @@ const Badge = styled.div`
 
 export const NumberCard = props => (
   <CardWrapper>
-    <CardFlex>
+    <OuterCardRow>
       <Badge>{props.number}</Badge>
       <Text2List>{props.text}</Text2List>
-    </CardFlex>
+    </OuterCardRow>
   </CardWrapper>
 )
