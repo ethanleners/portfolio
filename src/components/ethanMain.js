@@ -21,13 +21,10 @@ const EthanMain = () => {
   const EthanBackgroundCard = styled(Card)`
     ${below[900]`
       /* flex-direction: column; */
-      margin: 0%;
-      width: 100%;
-      height: 98%;
-      top: -1%;
-      left: 0;
+      box-shadow: none;
+      width: 10%;
+      height: 10%;
     `}
-
     position: absolute;
     width: 90%;
     height: 100%;
@@ -38,15 +35,16 @@ const EthanMain = () => {
 
   const EthanMainCard = styled(Card)`
     ${below[900]`
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1), 0px 3px 10px rgba(0, 0, 0, 0.12), 0px 6px 6px rgba(0, 0, 0, 0.06);
       flex-direction: column;
       margin: 5%;
     `}
 
     ${below[600]`
       flex-direction: column;
-      margin: 1%;
+      margin: 30px 1%;
       margin-top: 5%;
-      padding: 0 10px;
+      padding: 10px;
     `}
 
     box-shadow: none;

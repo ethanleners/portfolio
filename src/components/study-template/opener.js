@@ -19,7 +19,7 @@ const OpenerCard = styled(OuterCardRow)`
 export const Opener = props => {
   return (
     <OpenerCard>
-      <ImageWrapper maxWidth="307px" to="/">{props.image}</ImageWrapper>
+      <ImageWrapper maxWidth={props.imageWidth} to="/">{props.image}</ImageWrapper>
       <CardText>
         <Title1>{props.title}</Title1>
         {props.copy.map((point, i) => (

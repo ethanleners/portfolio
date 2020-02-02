@@ -15,12 +15,12 @@ import {
   Conclusion,
 } from "../study-template"
 
-export const Study1 = ({ children }) => {
+export const Study2 = ({ children }) => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "friendly2.png" }) {
+      file(relativePath: { eq: "Preview_Notice.png" }) {
         childImageSharp {
-          fluid(maxWidth: 307) {
+          fluid(maxWidth: 245) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -179,7 +179,7 @@ export const Study1 = ({ children }) => {
     <>
       <Opener
         image={<Img fluid={data.file.childImageSharp.fluid} />}
-        imageWidth="307px"
+        imageWidth="245px"
         copy={OpenerCopy}
         emphasis="This is a mock project intended to exhibit my design process."
         title="Case Study: Friendly"
