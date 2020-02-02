@@ -1,6 +1,6 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import { below } from "../utilities"
 
@@ -19,6 +19,8 @@ const Header = ({ siteTitle }) => {
     width: 100%;
     font-family: Heebo, Arial, Roboto, Ubuntu, Cantarell, "Open Sans",
       "Helvetica Neue", sans-serif;
+    /* font-family: Montserrat, Heebo, Arial, Roboto, Ubuntu, Cantarell,
+      "Open Sans", "Helvetica Neue", sans-serif; */
   `
 
   const MenuLink = styled(Link)`
@@ -47,23 +49,36 @@ const Header = ({ siteTitle }) => {
   const EthanName = styled(MenuLink)`
     ${props => `
       background: ${location === "" ? props.theme.colors.accent : "none"};
-      color: ${location === "" ? props.theme.colors.emphasis : props.theme.colors.accent};
+      color: ${
+        location === ""
+          ? props.theme.colors.emphasis
+          : props.theme.colors.accent
+      };
       `};
   `
 
   const Portfolio = styled(MenuLink)`
     ${props => `
       background: ${
-        location === "portfolio" ? props.theme.colors.accent : "none"
+        location.indexOf("portfolio") >= 0 ? props.theme.colors.accent : "none"
       };
-      color: ${location === "portfolio" ? props.theme.colors.emphasis : props.theme.colors.accent};
+      color: ${
+        location.indexOf("portfolio") >= 0
+          ? props.theme.colors.emphasis
+          : props.theme.colors.accent
+      };
+      height: 100%;
     `};
   `
 
   const Resume = styled(MenuLink)`
     ${props => `
       background: ${location === "resume" ? props.theme.colors.accent : "none"};
-      color: ${location === "resume" ? props.theme.colors.emphasis : props.theme.colors.accent};
+      color: ${
+        location === "resume"
+          ? props.theme.colors.emphasis
+          : props.theme.colors.accent
+      };
     `};
   `
 
@@ -100,15 +115,79 @@ const Header = ({ siteTitle }) => {
     `}
   `
 
+  // let showNav = false
+
+  const handleClick = e => {
+    e.preventDefault()
+    console.log(showNav)
+    // showNav = !showNav
+    setShowNav(showNav => !showNav)
+    // this.setState(prevState => ({ showNav: !prevState.showNav }))
+    console.log("The link was clicked.")
+    console.log(showNav)
+  }
+
+  const PortfolioLinks = styled.div`
+    height: 100%;
+    position: relative;
+
+    transform: translateY(-200px);
+    ${props =>
+      props.showNav
+        ? `
+    transform: translateY(0px);
+    z-index: 1000;
+    `
+        : ``}
+  `
+
+  const PortfolioLink = styled(MenuLink)`
+    ${props => `
+      border: 1px solid ${props.theme.colors.secondary};
+      border-bottom: none;
+      color: ${props.theme.colors.secondary};
+
+      &:last-of-type {
+        border-bottom: 1px solid ${props.theme.colors.secondary};;
+      }
+
+      &:hover {
+      color: ${props.theme.colors.emphasis};
+      background: ${props.theme.colors.secondary};
+    }    `}
+    z-index: 1000;
+    background: #ffffff;
+    position: relative;
+    align-items: center;
+    box-sizing: border-box;
+  `
+
+  const [showNav, setShowNav] = useState(false)
+
   return (
     <MainHeader>
       <FlexRowOuter>
         <MenuLink activeClassName="active" to="/" style={{}}>
           Ethan Leners
         </MenuLink>
-        <FlexRow >
-          <MenuLink activeClassName="active" to="/portfolio">Portfolio</MenuLink>
-          <MenuLink activeClassName="active" to="/resume">Resume</MenuLink>
+        <FlexRow>
+          <div style={{ height: "100%" }}>
+            <Portfolio
+              to="/portfolio"
+              activeClassName="active"
+              onClick={handleClick}
+            >
+              Portfolio
+            </Portfolio>
+            <PortfolioLinks showNav={showNav}>
+              <PortfolioLink to="/portfolio/friendly">Friendly</PortfolioLink>
+              <PortfolioLink to="/portfolio/notice">Notice</PortfolioLink>
+            </PortfolioLinks>
+          </div>
+
+          <MenuLink activeClassName="active" to="/resume">
+            Resume
+          </MenuLink>
           {/* <Blog to="/">Blog</Blog> */}
         </FlexRow>
       </FlexRowOuter>

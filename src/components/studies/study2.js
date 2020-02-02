@@ -177,7 +177,7 @@ export const Study2 = ({ children }) => {
         imageWidth="245px"
         copy={OpenerCopy}
         emphasis="This is a mock project intended to exhibit my design process."
-        title="Case Study: Friendly"
+        title="Case Study: Notice"
       />
       <Statement copy={StatementCopy} />
       <Process title="The Process" steps={ProcessCopy} />

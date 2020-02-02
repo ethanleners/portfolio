@@ -14,6 +14,7 @@ import {
 const OpenerCard = styled(OuterCardRow)`
   box-shadow: none;
   margin: 0;
+  background: none;
 `
 
 export const Opener = props => {
