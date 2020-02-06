@@ -3,9 +3,9 @@ require("dotenv").config({
 })
 module.exports = {
   siteMetadata: {
-    title: `Ethan Leners`,
-    description: `Design portfolio website.`,
-    author: `Ethan Leners`,
+    title: `Ethan Leners Porfolio`,
+    description: `Design website showcasing my work and ideas.`,
+    author: `@ethanLeners`,
   },
   plugins: [
     `gatsby-plugin-styled-components`,

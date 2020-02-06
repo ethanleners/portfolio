@@ -15,7 +15,7 @@ import {
   Conclusion1,
 } from "../study-template"
 
-export const Study1 = ({ children }) => {
+export const Study1 = () => {
   const data = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "friendly2.png" }) {
