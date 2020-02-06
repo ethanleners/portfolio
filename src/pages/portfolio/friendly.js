@@ -13,7 +13,7 @@ import {
 const Portfolio = () => {
   return (
     <Layout>
-      <SEO title="Case Study: Notice" description='Notice is a mobile app designed to develop and facilitate the mindfulness technique of "noticing".' />
+      <SEO title="Case Study | Notice" description='Notice is a mobile app designed to develop and facilitate the mindfulness technique of "noticing".' />
       <Study1 />
     </Layout>
   )

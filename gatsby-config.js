@@ -8,6 +8,7 @@ module.exports = {
     author: `@ethanLeners`,
   },
   plugins: [
+    `gatsby-transformer-remark`,
     `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-google-fonts`,

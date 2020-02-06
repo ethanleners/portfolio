@@ -148,7 +148,7 @@ const CaseStudy = () => {
         <CaseStudyImage
           image={
             <Img
-              style={{ maxHeight: "402px;" }}
+              style={{ maxHeight: "402px" }}
               fluid={data.friendly.childImageSharp.fluid}
             />
           }

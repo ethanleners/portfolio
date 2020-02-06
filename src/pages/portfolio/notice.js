@@ -9,7 +9,7 @@ import {
 const Portfolio = () => {
   return (
     <Layout>
-      <SEO title="Case Study: Friendly" description="Friendly is a social media networking app that offers skill-building opportunities to help make deep, lasting friendships." />
+      <SEO title="Case Study | Friendly" description="Friendly is a social media networking app that offers skill-building opportunities to help make deep, lasting friendships." />
       <Study2 />
     </Layout>
   )
