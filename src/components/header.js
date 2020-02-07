@@ -188,6 +188,9 @@ const Header = ({ siteTitle }) => {
           <MenuLink activeClassName="active" to="/resume">
             Resume
           </MenuLink>
+          <MenuLink activeClassName="active" to="/blogposts">
+            Blog
+          </MenuLink>
           {/* <Blog to="/">Blog</Blog> */}
         </FlexRow>
       </FlexRowOuter>
