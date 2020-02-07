@@ -53,7 +53,7 @@ const BlogLink = styled(Link)`
 `
 
 const BlogPost = ({ data }) => {
-  const { title, body, createdAt, tags } = data.contentfulBlogPost
+  const { title, body, createdDate, tags } = data.contentfulBlogPost
   return (
     <Layout>
       <SEO title={title} />
@@ -75,7 +75,7 @@ const BlogPost = ({ data }) => {
           />
         )} */}
         <Text2 style={{ paddingBottom: "0", paddingTop: "10px" }}>
-          {createdAt}
+          {createdDate}
         </Text2>
         {/* <Text2>
           {tags && tags.map(tag => (
@@ -98,7 +98,7 @@ export const pageQuery = graphql`
   query($slug: String!) {
     contentfulBlogPost(slug: { eq: $slug }) {
       title
-      createdAt(formatString: "MMMM DD, YYYY")
+      createdDate(formatString: "MMMM D, YYYY")
       slug
       body {
         childMarkdownRemark {

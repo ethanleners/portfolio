@@ -23,7 +23,7 @@ const BlogPosts = ({ data }) => {
       <div className="blogposts">
         {blogPosts.map(({ node: post }) => (
           <Card as={Link} style={{textDecoration: 'none'}} to={`/blogpost/${post.slug}`} key={post.id}>
-            <Text2List>{post.createdAt}</Text2List>
+            <Text2List>{post.createdDate}</Text2List>
             <Title2 style={{marginTop: '0', paddingTop: '0'}}>
               {post.title}
             </Title2>
@@ -37,13 +37,13 @@ export default BlogPosts
 export const query = graphql`
   query BlogPostsPageQuery {
     allContentfulBlogPost(limit: 1000, sort: {
-      fields: [createdAt]
+      fields: [createdDate]
       order: [DESC]}) {
       edges {
         node {
           id
           title
-          createdAt(formatString: "MMMM DD, YYYY")
+          createdDate(formatString: "MMMM D, YYYY")
           slug
           body {
             body
