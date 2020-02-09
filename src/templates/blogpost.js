@@ -74,17 +74,21 @@ const BlogPost = ({ data }) => {
             src={image.file.url}
           />
         )} */}
-        <Text2 style={{ paddingBottom: "0", paddingTop: "10px" }}>
-          {createdDate}
-        </Text2>
+        {createdDate && (
+          <Text2 style={{ paddingBottom: "0", paddingTop: "10px" }}>
+            {createdDate}
+          </Text2>
+        )}
         {/* <Text2>
           {tags && tags.map(tag => (
             <>{tag}, </>
           ))}
         </Text2> */}
-        <Text
-          dangerouslySetInnerHTML={{ __html: body.childMarkdownRemark.html }}
-        />
+        {body && (
+          <Text
+            dangerouslySetInnerHTML={{ __html: body.childMarkdownRemark.html }}
+          />
+        )}
         <FlexRow>
           <div></div>
           <BlogLink to="/blogposts">View more posts</BlogLink>
