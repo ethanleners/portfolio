@@ -22,6 +22,7 @@ module.exports = {
       options: {
         spaceId: process.env.SPACE_ID,
         accessToken: process.env.API_KEY,
+        host: process.env.HOST ? process.env.HOST : `cdn.contentful.com`
       },
     },
     `gatsby-plugin-react-helmet`,
