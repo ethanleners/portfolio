@@ -1,18 +1,10 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import { below } from "../utilities"
 
 const Header = ({ siteTitle }) => {
-  let location
-  try {
-    location = window.location.pathname.slice(1)
-  } catch {
-    console.log("Window not defined")
-    location = ""
-  }
-
   const MainHeader = styled.header`
     ${props => `background: ${props.theme.colors.header};`};
     height: 50px;
@@ -127,6 +119,21 @@ const Header = ({ siteTitle }) => {
   `
 
   const [showNav, setShowNav] = useState(false)
+
+  const setLocation = () => {
+    try {
+      location = window.location.pathname.slice(1)
+    } catch {
+      console.log("Window not defined")
+      location = ""
+    }
+  }
+  let location = ""
+  setLocation();
+  useEffect(() => setLocation())
+
+  const isPartiallyActive = ({ isPartiallyCurrent }) =>
+    isPartiallyCurrent ? { className: "item active" } : null
 
   return (
     <MainHeader>
