@@ -54,7 +54,6 @@ const Text = styled(Text1)`
 
   .quote-card {
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.24), 0px 0px 2px rgba(0, 0, 0, 0.12);
-    /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1), 0px 3px 10px rgba(0, 0, 0, 0.12), 0px 6px 6px rgba(0, 0, 0, 0.06); */
     padding: 40px;
     margin: 0 0 40px 0;
 
