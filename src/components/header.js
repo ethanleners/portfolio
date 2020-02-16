@@ -40,19 +40,21 @@ const Header = ({ siteTitle, location }) => {
   `
 
   const Portfolio = styled(MenuLink)`
-    ${props => `
-      background: ${
-        location.href.indexOf("portfolio") >= 0
-          ? props.theme.colors.accent
-          : "none"
-      };
+    ${props =>
+      location.href
+        ? `background: ${
+            location.href.indexOf("/portfolio/") >= 0
+              ? props.theme.colors.accent
+              : "none"
+          };
       color: ${
-        location.href.indexOf("portfolio") >= 0
+        location.href.indexOf("/portfolio/") >= 0
           ? props.theme.colors.emphasis
           : props.theme.colors.accent
       };
       height: 100%;
-    `};
+    `
+        : ``};
   `
 
   const FlexRow = styled.div`
