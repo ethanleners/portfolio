@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { theme } from "../utilities/Theme"
 import styled, { createGlobalStyle, ThemeProvider } from "styled-components"
+import { Location } from "@reach/router"
 
 import Header from "./header"
 import "./layout.css"
@@ -42,10 +43,19 @@ const Layout = ({ children }) => {
 
   return (
     <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <Main>{children}</Main>
-      <Footer />
+      <Location>
+        {({ location }) => (
+          <>
+            <GlobalStyle />
+            <Header
+              location={location}
+              siteTitle={data.site.siteMetadata.title}
+            />
+            <Main>{children}</Main>
+            <Footer />
+          </>
+        )}
+      </Location>
     </ThemeProvider>
   )
 }
