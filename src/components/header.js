@@ -46,17 +46,6 @@ const Header = ({ siteTitle }) => {
     `};
   `
 
-  const EthanName = styled(MenuLink)`
-    ${props => `
-      background: ${location === "" ? props.theme.colors.accent : "none"};
-      color: ${
-        location === ""
-          ? props.theme.colors.emphasis
-          : props.theme.colors.accent
-      };
-      `};
-  `
-
   const Portfolio = styled(MenuLink)`
     ${props => `
       background: ${
@@ -70,24 +59,6 @@ const Header = ({ siteTitle }) => {
       height: 100%;
     `};
   `
-
-  const Resume = styled(MenuLink)`
-    ${props => `
-      background: ${location === "resume" ? props.theme.colors.accent : "none"};
-      color: ${
-        location === "resume"
-          ? props.theme.colors.emphasis
-          : props.theme.colors.accent
-      };
-    `};
-  `
-
-  // const Blog = styled(MenuLink)`
-  //   ${props => `
-  //     background: ${location === "blog" ? props.theme.colors.accent : "none"};
-  //     color: ${props.theme.colors.text};
-  //   `};
-  // `
 
   const FlexRow = styled.div`
     display: flex;
@@ -115,16 +86,9 @@ const Header = ({ siteTitle }) => {
     `}
   `
 
-  // let showNav = false
-
   const handleClick = e => {
     e.preventDefault()
-    console.log(showNav)
-    // showNav = !showNav
     setShowNav(showNav => !showNav)
-    // this.setState(prevState => ({ showNav: !prevState.showNav }))
-    console.log("The link was clicked.")
-    console.log(showNav)
   }
 
   const PortfolioLinks = styled.div`
@@ -180,15 +144,15 @@ const Header = ({ siteTitle }) => {
               Portfolio
             </Portfolio>
             <PortfolioLinks showNav={showNav}>
-              <PortfolioLink to="/portfolio/friendly">Friendly</PortfolioLink>
-              <PortfolioLink to="/portfolio/notice">Notice</PortfolioLink>
+              <PortfolioLink to="/portfolio/friendly/">Friendly</PortfolioLink>
+              <PortfolioLink to="/portfolio/notice/">Notice</PortfolioLink>
             </PortfolioLinks>
           </div>
 
-          <MenuLink activeClassName="active" to="/resume">
+          <MenuLink activeClassName="active" to="/resume/">
             Resume
           </MenuLink>
-          <MenuLink activeClassName="active" to="/blogposts">
+          <MenuLink activeClassName="active" to="/blogposts/">
             Blog
           </MenuLink>
           {/* <Blog to="/">Blog</Blog> */}
