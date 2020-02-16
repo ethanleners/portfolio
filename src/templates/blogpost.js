@@ -5,9 +5,30 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { below } from "../utilities"
 
-import { Title1, Text1, Text2 } from "../components/molecule"
+import {
+  Title1,
+  Text1,
+  Text2,
+  OuterCardColumn,
+  InnerCard,
+} from "../components/molecule"
 
 const Text = styled(Text1)`
+  h2 {
+    ${props => `
+  color: ${props.theme.colors.secondary};
+    `}
+    ${below[600]`
+    font-size: 20px;
+    line-height: 29px;
+    `}
+    padding-top: 15px;
+    font-size: 28px;
+    font-family: Heebo, Arial, Roboto, Ubuntu, Cantarell, "Open Sans",
+      "Helvetica Neue", sans-serif;
+    line-height: 36px;
+  }
+
   h3 {
     ${props => `
   color: ${props.theme.colors.secondary};
@@ -21,6 +42,30 @@ const Text = styled(Text1)`
       "Helvetica Neue", sans-serif;
     line-height: 36px;
     font-weight: normal;
+  }
+
+  hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 40px 0 0 0;
+  }
+
+  .quote-card {
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.24), 0px 0px 2px rgba(0, 0, 0, 0.12);
+    padding: 40px;
+    margin: 0 0 40px 0;
+
+    .quote {
+      font-family: Montserrat, Heebo, Arial, Roboto, Ubuntu, Cantarell,
+        "Open Sans", "Helvetica Neue", sans-serif;
+      font-style: italic;
+    }
+
+    .quote-author {
+      padding-top: 10px;
+    }
   }
 `
 

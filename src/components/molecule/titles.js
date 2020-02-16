@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { below } from "../../utilities"
 
-export const Title1 = styled.div`
+export const Title1 = styled.h1`
   ${props => `
   color: ${props.theme.colors.secondary};
     `}
@@ -16,7 +16,7 @@ export const Title1 = styled.div`
   line-height: 50px;
 `
 
-export const Title2 = styled.div`
+export const Title2 = styled.h2`
   ${props => `
   color: ${props.theme.colors.secondary};
     `}
@@ -31,7 +31,7 @@ export const Title2 = styled.div`
   line-height: 36px;
 `
 
-export const Title3 = styled.div`
+export const Title3 = styled.h3`
   ${props => `
   color: ${props.theme.colors.secondary};
     `}
