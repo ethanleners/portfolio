@@ -1,6 +1,6 @@
 export const job_history_data = [
   {
-    role: "Freelance",
+    role: "Designer, UI/UX",
     company: "Meta Lark Design",
     range: "Aug 2018 — Present",
   },
