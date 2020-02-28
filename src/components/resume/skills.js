@@ -115,7 +115,7 @@ export const Skills = ({ children }) => {
         </FlexCard>
       </FlexRow>
       <DownloadResume
-        href="https://drive.google.com/file/d/1LPzV66S2PrVM6a-5mSrHR7PeMT93b5L4/view?usp=sharing"
+        href="https://drive.google.com/open?id=1c7AIELgODICGhMFQQxe7jlK9DH8BmfhQ"
         target="_blank"
         rel="noopener norefferer"
       >
