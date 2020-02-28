@@ -55,7 +55,7 @@ const FlexCard = styled(HigherCard)`
 
 const education = [
   "M.F.A, School of the Art Institute of Chicago, 2019",
-  "B.F.A, School of the Art Institute of Chicago, 2008",
+  "B.F.A, School of the Art Institute of Chicago, 2012",
 ]
 
 export const Education = ({ children }) => {
