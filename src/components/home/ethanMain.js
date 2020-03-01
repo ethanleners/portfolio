@@ -2,8 +2,8 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
-import { below } from "../utilities"
-import { Title1, Text1, Text1List, Card, HigherCard } from "./molecule"
+import { below } from "../../utilities"
+import { Title1, Text1, Text1List, Card, HigherCard } from "../molecule"
 
 const EthanMain = () => {
   const data = useStaticQuery(graphql`
@@ -37,6 +37,7 @@ const EthanMain = () => {
     ${below[900]`
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1), 0px 3px 10px rgba(0, 0, 0, 0.12), 0px 6px 6px rgba(0, 0, 0, 0.06);
       flex-direction: column;
+      padding-top: 30px;
       margin: 5%;
     `}
 
@@ -50,6 +51,7 @@ const EthanMain = () => {
     box-shadow: none;
     padding: 0;
     margin-top: 80px;
+    margin-bottom: 80px;
     box-sizing: border-box;
     display: flex;
     flex-direction: row;

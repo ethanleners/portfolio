@@ -3,8 +3,8 @@ import { Link } from "gatsby"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
-import { below } from "../utilities"
-import { Title1, Text1, Card } from "./molecule"
+import { below } from "../../utilities"
+import { Title1, Text1, Card } from "../molecule"
 
 const caseStudyUrls = {
   friendly: "/portfolio/friendly",
