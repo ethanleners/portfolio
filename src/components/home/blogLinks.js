@@ -19,19 +19,19 @@ const OuterCard = styled(Card)`
 
 const AllLinks = styled.div`
   ${props => `
-  background: ${props.theme.colors.overlay};
-  color: ${props.theme.colors.text};
-`}
+    background: ${props.theme.colors.overlay};
+    color: ${props.theme.colors.text};
+  `}
 
   ${below[900]`
-  align-items: center;
-  justify-content: space-around;
-  padding-top: 0;
-  padding-bottom: 0;
-  margin: 5%;
-`}
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 5%;
+  `}
 
-box-sizing: border-box;
+  box-sizing: border-box;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

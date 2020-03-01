@@ -2,12 +2,12 @@ export const theme = {
   breakpoints: ["600px", "900px", "1200px"],
   colors: {
     background: "#FFFFFF", // white
-    accent: "#FF4B5B", // red
+    accent: "#DC333A", // red
     secondary: "#435AD5", // blue
     text: "#3E3D4A",
     overlay: "#FFFFFF",
     header: "#FFFFFF",
-    headerText: "#FF4B5B",
+    headerText: "#DC333A",
     emphasis: "#FFFFFF",
     social: "#435AD5",
   },
@@ -18,7 +18,7 @@ export const theme = {
 //   breakpoints: ["600px", "900px", "1200px"],
 //   colors: {
 //     background: "#191A2A", // dark blue
-//     accent: "#FF4B5B", // red
+//     accent: "#DC333A", // red
 //     secondary: "#FFD740", // yellow
 //     text: "rgba(255, 255, 255, 0.87)",
 //     overlay: "rgba(255, 255, 255, 0.12)",
