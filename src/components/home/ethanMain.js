@@ -3,7 +3,14 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
 import { below } from "../../utilities"
-import { Title1, Text1, Text1List, Card, HigherCard } from "../molecule"
+import {
+  Title1,
+  Text1,
+  Text1List,
+  Text2List,
+  Card,
+  HigherCard,
+} from "../molecule"
 
 const EthanMain = () => {
   const data = useStaticQuery(graphql`
@@ -17,6 +24,25 @@ const EthanMain = () => {
       }
     }
   `)
+
+  const Call = styled.a`
+    ${props => `
+      color: ${props.theme.colors.accent};
+    `}
+    ${below[600]`
+      font-size: 16px;
+      line-height: 22px;
+    `}
+    font-family: Montserrat, Heebo, Arial, Roboto, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 30px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  `
 
   const EthanBackgroundCard = styled(Card)`
     ${below[900]`
@@ -110,12 +136,24 @@ const EthanMain = () => {
     padding: 5px 0;
   `
 
+  const Title = styled(Title1)`
+    padding-top: 0;
+    margin-top: 0;
+  `
+
+  const Text = styled(Text1List)`
+    ${below[900]`
+      padding-top: 0;
+    `}
+    padding-top: 40px;
+  `
+
   return (
     <EthanMainCard>
       <EthanBackgroundCard></EthanBackgroundCard>
       <EthanImage fluid={data.placeholderImage.childImageSharp.fluid} />
       <Bio>
-        <Title1>I’m Ethan Leners</Title1>
+        <Title>I’m Ethan Leners</Title>
         <TextTitle>UI | UX DESIGNER</TextTitle>
         <TextTitle style={{ paddingBottom: "10px" }}>WRITER</TextTitle>
         <List>
@@ -125,6 +163,8 @@ const EthanMain = () => {
           <Text1List>*dedicated problem solver</Text1List>
           <Text1List>*habitual list-maker</Text1List>
         </List>
+        <Text style={{}}>Looking for my studio art portfolio?</Text>
+        <Call href="https://ethanleners.format.com/">My Art Portfolio →</Call>
       </Bio>
     </EthanMainCard>
   )
