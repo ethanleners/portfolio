@@ -163,7 +163,7 @@ const EthanMain = () => {
           <Text1List>*dedicated problem solver</Text1List>
           <Text1List>*habitual list-maker</Text1List>
         </List>
-        <Text style={{}}>Looking for my studio art portfolio?</Text>
+        <Text>Looking for my studio art portfolio?</Text>
         <Call href="https://ethanleners.format.com/">My Art Portfolio →</Call>
       </Bio>
     </EthanMainCard>
