@@ -1,7 +1,13 @@
 import React from "react"
 import styled from "styled-components"
 
-import { Title3, HigherCard, Text2, Text2List, SectionCaption } from "../molecule"
+import {
+  Title3,
+  HigherCard,
+  Text2,
+  Text2List,
+  SectionCaption,
+} from "../molecule"
 import { below } from "../../utilities"
 import { skills, tools, job_history_data } from "./resume_data"
 
@@ -9,7 +15,7 @@ const FlexColumn = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-`;
+`
 
 const FlexRow = styled.div`
   ${below[600]`
@@ -31,8 +37,7 @@ const DownloadResume = styled.a`
     line-height: 25px;
     `}
     padding-top: 20px;
-  font-family: Heebo, Arial, Roboto, Ubuntu, Cantarell, "Open Sans",
-    "Helvetica Neue", sans-serif;
+  ${props => `font-family: ${props.theme.fonts.header};`};
   font-size: 20px;
   line-height: 29px;
   align-self: flex-end;
@@ -85,11 +90,11 @@ export const Skills = ({ children }) => {
             `
 
             return (
-              <Job key={i+300}>
+              <Job key={i + 300}>
                 <Text2List key={i}>
                   <strong>{job.role}</strong>
                 </Text2List>
-                <Text2List key={i+30}>{job.company} </Text2List>
+                <Text2List key={i + 30}>{job.company} </Text2List>
                 <Text2List key={i + 60}>{job.range} </Text2List>
               </Job>
             )

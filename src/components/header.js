@@ -8,12 +8,9 @@ import { below } from "../utilities"
 const Header = ({ siteTitle, location }) => {
   const MainHeader = styled.header`
     ${props => `background: ${props.theme.colors.header};`};
+    ${props => `font-family: ${props.theme.fonts.header};`};
     height: 50px;
     width: 100%;
-    font-family: Heebo, Arial, Roboto, Ubuntu, Cantarell, "Open Sans",
-      "Helvetica Neue", sans-serif;
-    /* font-family: Montserrat, Heebo, Arial, Roboto, Ubuntu, Cantarell,
-      "Open Sans", "Helvetica Neue", sans-serif; */
   `
 
   const MenuLink = styled(Link)`

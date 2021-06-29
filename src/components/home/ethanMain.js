@@ -1,30 +1,10 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
 import styled from "styled-components"
 import { below } from "../../utilities"
-import {
-  Title1,
-  Text1,
-  Text1List,
-  Text2List,
-  Card,
-  HigherCard,
-} from "../molecule"
+import { Title1, Text1, Text1List, Card, HigherCard } from "../molecule"
+import EthanPic from "../../images/EthanLenersCompressed.jpg"
 
 const EthanMain = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      placeholderImage: file(relativePath: { eq: "EthanLenerspic.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 300, maxHeight: 400) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
-
   const Call = styled.a`
     ${props => `
       color: ${props.theme.colors.accent};
@@ -33,8 +13,7 @@ const EthanMain = () => {
       font-size: 16px;
       line-height: 22px;
     `}
-    font-family: Montserrat, Heebo, Arial, Roboto, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-      sans-serif;
+     ${props => `font-family: ${props.theme.fonts.body};`};
     text-decoration: none;
     font-size: 20px;
     line-height: 30px;
@@ -44,22 +23,11 @@ const EthanMain = () => {
     }
   `
 
-  const EthanBackgroundCard = styled(Card)`
-    ${below[900]`
-      box-shadow: none;
-      width: 10%;
-      height: 10%;
-      display: none;
-    `}
-    position: absolute;
-    width: 90%;
-    height: 100%;
-    top: -40px;
-    left: 10%;
-    z-index: -1;
-  `
-
   const EthanMainCard = styled(Card)`
+    ${below[1400]`
+      margin: 80px 0;
+    `}
+
     ${below[900]`
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1), 0px 3px 10px rgba(0, 0, 0, 0.12), 0px 6px 6px rgba(0, 0, 0, 0.06);
       flex-direction: column;
@@ -76,13 +44,12 @@ const EthanMain = () => {
 
     box-shadow: none;
     padding: 0;
-    margin-top: 80px;
-    margin-bottom: 80px;
+    margin: 80px 10%;
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
   `
 
   const Bio = styled.div`
@@ -93,46 +60,47 @@ const EthanMain = () => {
       width: 100%;
       padding: 50px 0;
     `}
+    ${below[1200]`
+        padding-right: 0;
+    `}
     ${below[600]`
       flex-direction: column;
       width: 100%;
       padding: 20px 0;
     `}
-    width: calc(100% - 300px);
+    flex-basis: 2;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 50px 100px;
+    padding: 50px;
+    padding-right: 10%;
     box-sizing: border-box;
   `
 
-  const List = styled(HigherCard)`
-    ${props => `
-      background: ${props.theme.colors.overlay};
-      color: ${props.theme.colors.text};
+  const EthanImageWrapper = styled.div`
+    text-align: center;
+    flex-basis: 1;
+    padding-left: 10%;
+    ${below[1200]`
+        padding-left: 0;
     `}
-    font-family: Montserrat, Heebo, Arial, Roboto, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-      sans-serif;
-    padding: 20px;
-    margin: 20px 0 0 0;
   `
 
-  const EthanImage = styled(Img)`
-    max-width: 300px;
+  const EthanImage = styled.img`
+    max-width: 400px;
     max-height: 400px;
+    border-radius: 50%;
     width: 100%;
-    height: 100%;
     ${below[600]`
       margin: 20px;
     `}
     ${below[400]`
-      margin: 20px 60px;
+      margin: 0;
     `}
   `
 
   const TextTitle = styled(Text1)`
-    font-family: Heebo, Arial, Roboto, Ubuntu, Cantarell, "Open Sans",
-      "Helvetica Neue", sans-serif;
+    ${props => `font-family: ${props.theme.fonts.header};`};
     padding: 5px 0;
   `
 
@@ -150,21 +118,25 @@ const EthanMain = () => {
 
   return (
     <EthanMainCard>
-      <EthanBackgroundCard></EthanBackgroundCard>
-      <EthanImage fluid={data.placeholderImage.childImageSharp.fluid} />
+      <EthanImageWrapper>
+        <EthanImage src={EthanPic} />
+      </EthanImageWrapper>
       <Bio>
         <Title>I’m Ethan Leners</Title>
         <TextTitle>UI | UX DESIGNER</TextTitle>
         <TextTitle style={{ paddingBottom: "10px" }}>WRITER</TextTitle>
-        <List>
-          <Text1List>*long-time people pleaser</Text1List>
-          <Text1List>*advocate for accessibility</Text1List>
-          <Text1List>*disciple of good design</Text1List>
-          <Text1List>*dedicated problem solver</Text1List>
-          <Text1List>*habitual list-maker</Text1List>
-        </List>
-        <Text>Looking for my studio art portfolio?</Text>
-        <Call href="https://ethanleners.format.com/">My Art Portfolio →</Call>
+        <Text1List>
+          Interdisciplinarian with experience in design and writing.
+        </Text1List>
+        <Text1List>
+          Facilitating good user experience and accessibility.
+        </Text1List>
+        <Text1List>Writing novels.</Text1List>
+        <Text1List>
+          Married to a wonderful{" "}
+          <Call href="https://www.micleners.com/">web dev geek</Call>.
+        </Text1List>
+        <Text1List>Seeking a role in UI/UX design.</Text1List>
       </Bio>
     </EthanMainCard>
   )

@@ -10,7 +10,6 @@ const IndexPage = () => (
       title="Ethan Leners | Home"
       keywords={[`design`, `user experience`, `blog`]}
     />
-    <EthanMain />
     <CaseStudy />
   </Layout>
 )

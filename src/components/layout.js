@@ -5,8 +5,8 @@ import { theme } from "../utilities/Theme"
 import styled, { createGlobalStyle, ThemeProvider } from "styled-components"
 import { Location } from "@reach/router"
 
+import EthanMain from "../components/home/ethanMain"
 import Header from "./header"
-import "./layout.css"
 import Footer from "./footer"
 
 const GlobalStyle = createGlobalStyle`
@@ -51,6 +51,8 @@ const Layout = ({ children }) => {
               location={location}
               siteTitle={data.site.siteMetadata.title}
             />
+            <EthanMain />
+
             <Main>{children}</Main>
             <Footer />
           </>
