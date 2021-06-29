@@ -10,7 +10,7 @@ export const Text1 = styled.div`
   font-size: 16px;
   line-height: 20px;
 `}
-font-family: Montserrat, Heebo, Arial, Roboto, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+ ${props => `font-family: ${props.theme.fonts.body};`};
   sans-serif;
   font-size: 20px;
   line-height: 24px;
@@ -26,7 +26,7 @@ export const Text2 = styled.div`
   padding: 10px 0;
   line-height: 18px;
 `}
-font-family: Montserrat, Heebo, Arial, Roboto, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+ ${props => `font-family: ${props.theme.fonts.body};`};
   sans-serif;
   font-size: 16px;
   line-height: 20px;
@@ -41,7 +41,7 @@ export const TextEmphasis = styled(Text2)`
   font-size: 14px;
   line-height: 18px;
 `}
-font-family: Montserrat, Heebo, Arial, Roboto, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+ ${props => `font-family: ${props.theme.fonts.body};`};
   sans-serif;
   font-size: 16px;
   font-style: italic;

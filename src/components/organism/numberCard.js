@@ -45,7 +45,7 @@ const Badge = styled.div`
   width: 35px;
   height: 35px;
   display: flex;
-  margin:0;
+  margin: 0;
   align-items: center;
   justify-content: center;
   z-index: 1000;
@@ -53,8 +53,7 @@ const Badge = styled.div`
   top: calc(50% - 17.5px);
   left: -17.5px;
   font-size: 20px;
-  font-family: Heebo, Arial, Roboto, Ubuntu, Cantarell, "Open Sans",
-    "Helvetica Neue", sans-serif;
+  ${props => `font-family: ${props.theme.fonts.header};`};
 `
 
 export const NumberCard = props => (

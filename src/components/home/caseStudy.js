@@ -39,8 +39,9 @@ box-sizing: border-box;
 display: flex;
 flex-direction: row-reverse;
 align-items: flex-end;
-padding: 40px 40px 40px 0;
+padding: 40px 40px 80px 0;
 justify-content: space-between;
+box-shadow: none;
 `
 
 const CaseStudy = () => {
@@ -73,8 +74,7 @@ const CaseStudy = () => {
       font-size: 16px;
       line-height: 22px;
     `}
-    font-family: Montserrat, Heebo, Arial, Roboto, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-      sans-serif;
+     ${props => `font-family: ${props.theme.fonts.body};`};
     text-decoration: none;
     font-size: 20px;
     line-height: 30px;

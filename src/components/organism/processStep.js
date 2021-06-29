@@ -53,15 +53,14 @@ const ImageText = styled(Text1)`
     color: ${props.theme.colors.text};
   `}
 
-  font-family: Heebo, Arial, Roboto, Ubuntu, Cantarell, "Open Sans",
-    "Helvetica Neue", sans-serif;
+  ${props => `font-family: ${props.theme.fonts.header};`};
   padding: 15px 0 0 0;
   text-align: center;
 `
 
 const Badge = styled.div`
   ${props => `
-    background: ${props.theme.colors.accent};
+    background: ${props.theme.colors.secondary};
     color: ${props.theme.colors.emphasis};
   `}
   border-radius: 50%;
@@ -76,8 +75,7 @@ const Badge = styled.div`
   left: 0px;
   margin: 0;
   font-size: 30px;
-  font-family: Heebo, Arial, Roboto, Ubuntu, Cantarell, "Open Sans",
-    "Helvetica Neue", sans-serif;
+  ${props => `font-family: ${props.theme.fonts.header};`};
 `
 
 export const ProcessStep = props => {

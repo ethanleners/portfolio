@@ -17,14 +17,6 @@ module.exports = {
         display: "swap",
       },
     },
-    {
-      resolve: `gatsby-source-contentful`,
-      options: {
-        spaceId: process.env.SPACE_ID,
-        accessToken: process.env.API_KEY,
-        host: process.env.HOST ? process.env.HOST : `cdn.contentful.com`
-      },
-    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,

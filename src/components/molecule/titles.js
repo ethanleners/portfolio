@@ -5,14 +5,13 @@ export const Title1 = styled.h1`
   ${props => `
   color: ${props.theme.colors.secondary};
     `}
+  ${props => `font-family: ${props.theme.fonts.header};`};
   ${below[600]`
     font-size: 26px;
     line-height: 40px;
     `}
-    padding-top: 20px;
+  padding-top: 20px;
   font-size: 34px;
-  font-family: Heebo, Arial, Roboto, Ubuntu, Cantarell, "Open Sans",
-    "Helvetica Neue", sans-serif;
   line-height: 50px;
 `
 
@@ -20,14 +19,13 @@ export const Title2 = styled.h2`
   ${props => `
   color: ${props.theme.colors.secondary};
     `}
+  ${props => `font-family: ${props.theme.fonts.header};`};
   ${below[600]`
     font-size: 20px;
     line-height: 29px;
     `}
-    padding-top: 15px;
+  padding-top: 15px;
   font-size: 28px;
-  font-family: Heebo, Arial, Roboto, Ubuntu, Cantarell, "Open Sans",
-    "Helvetica Neue", sans-serif;
   line-height: 36px;
 `
 
@@ -35,12 +33,11 @@ export const Title3 = styled.h3`
   ${props => `
   color: ${props.theme.colors.secondary};
     `}
+  ${props => `font-family: ${props.theme.fonts.header};`};
   ${below[600]`
     font-size: 18px;
     line-height: 25px;
     `}
-  font-family: Heebo, Arial, Roboto, Ubuntu, Cantarell, "Open Sans",
-    "Helvetica Neue", sans-serif;
   font-size: 20px;
   line-height: 29px;
 `
