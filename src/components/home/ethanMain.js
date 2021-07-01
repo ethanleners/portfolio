@@ -29,7 +29,6 @@ const EthanMain = () => {
     `}
 
     ${below[900]`
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1), 0px 3px 10px rgba(0, 0, 0, 0.12), 0px 6px 6px rgba(0, 0, 0, 0.06);
       flex-direction: column;
       padding-top: 30px;
       margin: 5%;
@@ -92,9 +91,6 @@ const EthanMain = () => {
     border-radius: 50%;
     width: 100%;
     ${below[600]`
-      margin: 20px;
-    `}
-    ${below[400]`
       margin: 0;
     `}
   `
